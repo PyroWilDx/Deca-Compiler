@@ -1,0 +1,10 @@
+// Description :
+//    Test de l'option -n
+//
+// Resultats :
+//    !! SI EXECUTION AVEC L'OPTION -n !!
+//    L'exécution affiche : 1
+
+{
+    println(1 / 0);
+}

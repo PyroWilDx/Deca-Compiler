@@ -1,0 +1,33 @@
+// Description :
+//    Test de plusieurs while imbriqués
+//
+// Resultats :
+//    168 * 42 * 10 = 70560
+//    x = 70560
+
+{
+    int x = 0;
+    int iMax = 168;
+    int jMax = 42;
+    int kMax = 10;
+    int i = 0;
+    int j;
+    int k;
+    while (i < iMax) {
+        j = 0;
+        while (j < jMax) {
+            k = 0;
+            while (k < kMax) {
+                x = x + 1;
+                k = k + 1;
+            }
+            j = j + 1;
+        }
+        i = i + 1;
+    }
+    println(iMax, " * ", jMax, " * ", kMax, " = ", iMax * jMax * kMax);
+    println("x = ", x);
+    if (!(x == iMax * jMax * kMax)) {
+        println("C'est pas bon...");
+    }
+}

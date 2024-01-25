@@ -1,0 +1,109 @@
+class Cell {
+    Cell rightSon = null;
+    Cell leftSon = null;
+    int value = 0;
+
+    void init(int value) {
+        this.value = value;
+    }
+
+    void setRightSon(Cell rightSon) {
+        this.rightSon = rightSon;
+    }
+
+    void setLeftSon(Cell leftSon) {
+        this.leftSon = leftSon;
+    }
+}
+
+class BinaryTree {
+    Cell head = null;
+
+    void addCell(Cell cell) {
+        this.head = addCellRec(head, cell);
+    }
+
+    Cell addCellRec(Cell head, Cell cell) {
+        if (head == null) {
+            return cell;
+        } else {
+            if (cell.value < head.value) {
+                head.leftSon = addCellRec(head.leftSon, cell);
+            } else {
+                head.rightSon = addCellRec(head.rightSon, cell);
+            }
+        }
+        return head;
+    }
+
+    void checkIn(int value) {
+        if (!valueInRec(this.head, value)) {
+            println();
+        }
+        // boolean a = valueInRec(this.head, value);
+        // if (!a) {
+        //     println();
+        // }
+    }
+
+    void checkNotIn(int value) {
+        boolean a = valueInRec(this.head, value);
+        if (a) {
+            println();
+        }
+    }
+
+    boolean valueInRec(Cell head, int value) {
+        if (head == null) {
+            return false;
+        } else {
+            if (value == head.value) {
+                return true;
+            } else {
+                if (value < head.value) {
+                    return valueInRec(head.leftSon, value);
+                } else {
+                    return valueInRec(head.rightSon, value);
+                }
+            }
+        }
+    }
+}
+
+{
+    BinaryTree tree = new BinaryTree();
+    Cell c5 = new Cell();
+    Cell c2 = new Cell();
+    Cell c9 = new Cell();
+    Cell c3 = new Cell();
+    Cell c7 = new Cell();
+    Cell c1 = new Cell();
+    Cell c20 = new Cell();
+
+    c5.init(5);
+    c2.init(2);
+    c9.init(9);
+    c3.init(3);
+    c7.init(7);
+    c1.init(1);
+    c20.init(20);
+
+    tree.addCell(c5);
+    tree.addCell(c2);
+    tree.addCell(c9);
+    tree.addCell(c3);
+    tree.addCell(c7);
+    tree.addCell(c1);
+    tree.addCell(c20);
+
+    tree.checkNotIn(15);
+    tree.checkIn(5);
+    tree.checkIn(2);
+    tree.checkIn(9);
+    tree.checkIn(3);
+    tree.checkNotIn(100);
+    tree.checkIn(7);
+    tree.checkIn(1);
+    tree.checkIn(20);
+    tree.checkNotIn(42);
+}

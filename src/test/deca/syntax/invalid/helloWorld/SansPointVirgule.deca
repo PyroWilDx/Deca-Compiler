@@ -1,0 +1,10 @@
+// Description:
+//    test de programme incorrect syntaxiquement (absence du point virgule en fin de ligne)
+//
+// Resultats:
+//    ligne 10 : Erreur, missing ';' at '}'
+//
+// Historique:
+//    cree le 01/01/2024
+
+{print("hello world" )}

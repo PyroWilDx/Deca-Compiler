@@ -1,0 +1,28 @@
+// Description :
+//    Test d'accès aux attributs sans utiliser this
+//
+// Resultats :
+//    2 6
+//    60 120
+
+class A {
+    protected int x = 2;
+
+    void thisX() {
+        print(x, " ");
+        x = 6;
+        println(x);
+    }
+
+    void thisXParam(int x) {
+        print(x, " ");
+        x = 120;
+        println(x);
+    }
+}
+
+{
+    A a = new A();
+    a.thisX();
+    a.thisXParam(60);
+}

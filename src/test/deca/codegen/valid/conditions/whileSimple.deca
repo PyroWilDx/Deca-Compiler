@@ -1,0 +1,19 @@
+// Description :
+//    Test de while simple
+//
+// Resultats :
+//    0123456789
+
+{
+    int i;
+
+    while (false) {
+        println("KO");
+    }
+
+    i = 0;
+    while (i < 10) {
+        print(i);
+        i = i + 1;
+    }
+}

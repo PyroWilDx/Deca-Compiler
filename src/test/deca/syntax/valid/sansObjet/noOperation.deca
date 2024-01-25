@@ -1,0 +1,13 @@
+// Description:
+//    Programme avec un point virgule dans listinst (noOperation)
+//
+// Resultats:
+//    Correct
+//
+// Historique:
+//    cree le 30/12/2023
+{
+  int a = 1 ;
+  ;
+  print("Correct");
+}

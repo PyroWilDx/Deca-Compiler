@@ -1,0 +1,26 @@
+// Description:
+//    Programme utilisant print,while,if.
+//
+// Resultats:
+//    if
+//    elseIf
+//    else
+//
+// Historique:
+//    cree le 30/12/2023
+{
+int i = 3;
+boolean a = true;
+while(i>0 && a){
+    if(i == 3){
+        print("if");
+        }
+    else if(i ==2){
+            print("elseIf");
+            }
+         else{
+         print("else");
+         }
+    i = i-1 ;
+    }
+}

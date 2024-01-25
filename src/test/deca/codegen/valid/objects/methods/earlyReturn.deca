@@ -1,0 +1,29 @@
+// Description :
+//    Test d'une méthode void avec un return au milieu
+//
+// Resultats :
+//    10
+
+class A {
+    int earlyReturn1() {
+        println(10);
+        return 41;
+        println(20);
+    }
+    int earlyReturn2() {
+        return 40;
+        println(20);
+    }
+}
+
+{
+    A a = new A();
+    int x = a.earlyReturn1() % 2;
+    if (x != 1) {
+        println("FAIL");
+    }
+    x = a.earlyReturn2() % 2;
+    if (x != 0) {
+        println("FAIL");
+    }
+}

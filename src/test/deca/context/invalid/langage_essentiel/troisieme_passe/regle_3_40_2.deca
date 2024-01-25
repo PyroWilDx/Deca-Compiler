@@ -1,0 +1,16 @@
+// Description:
+//    regle 3.40, l'expression evaluee par instanceof doit etre valide
+//
+// Resultats:
+//    Ligne 13: Undeclared identifier : 'x'.
+
+
+class C{
+
+}
+
+{
+    if( x instanceof C){
+        print("");
+    }
+}

@@ -1,0 +1,10 @@
+// Description:
+//    regle 3.33 operation partielle type_binary_op
+//
+// Resultats:
+//    Ligne 7: Binary operation '&&' cannot have operands of types : 'int', 'boolean'.
+{
+    boolean a = 1 && true;
+}
+// raison operation partielle type_binary_op
+// message : Binary operation '&&' cannot have operands of types : 'int', 'boolean'.

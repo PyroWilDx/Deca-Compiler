@@ -1,0 +1,227 @@
+// Description :
+//    Test de l'erreur de débordement du tas
+//    C'est à exécuter :
+//        - Avec un tas de moins de 10000 mots
+//        - En ayant un nombre de registre inférieur ou égal à 16 où 2 sont scratch
+//
+// Resultats :
+//    Pour que l'erreur se produise, la taille du tas doit être de moins de 10000 mots
+//    Dans ce cas, il s'affiche : Error: Heap Overflow
+//    Sinon, il ne s'affiche rien
+
+/*
+On va créer une classe avec 99 variables, puis créer 100 instances de cette classe
+Puis on va créer une seule instance d'une classe avec 0 variables
+On aura alors 10001 mots dans le tas
+*/
+
+class A {
+    int x0;
+    int x1;
+    int x2;
+    int x3;
+    int x4;
+    int x5;
+    int x6;
+    int x7;
+    int x8;
+    int x9;
+    int x10;
+    int x11;
+    int x12;
+    int x13;
+    int x14;
+    int x15;
+    int x16;
+    int x17;
+    int x18;
+    int x19;
+    int x20;
+    int x21;
+    int x22;
+    int x23;
+    int x24;
+    int x25;
+    int x26;
+    int x27;
+    int x28;
+    int x29;
+    int x30;
+    int x31;
+    int x32;
+    int x33;
+    int x34;
+    int x35;
+    int x36;
+    int x37;
+    int x38;
+    int x39;
+    int x40;
+    int x41;
+    int x42;
+    int x43;
+    int x44;
+    int x45;
+    int x46;
+    int x47;
+    int x48;
+    int x49;
+    int x50;
+    int x51;
+    int x52;
+    int x53;
+    int x54;
+    int x55;
+    int x56;
+    int x57;
+    int x58;
+    int x59;
+    int x60;
+    int x61;
+    int x62;
+    int x63;
+    int x64;
+    int x65;
+    int x66;
+    int x67;
+    int x68;
+    int x69;
+    int x70;
+    int x71;
+    int x72;
+    int x73;
+    int x74;
+    int x75;
+    int x76;
+    int x77;
+    int x78;
+    int x79;
+    int x80;
+    int x81;
+    int x82;
+    int x83;
+    int x84;
+    int x85;
+    int x86;
+    int x87;
+    int x88;
+    int x89;
+    int x90;
+    int x91;
+    int x92;
+    int x93;
+    int x94;
+    int x95;
+    int x96;
+    int x97;
+    int x98;
+}
+
+class NoVar {
+
+}
+
+{
+    A a0 = new A();
+    A a1 = new A();
+    A a2 = new A();
+    A a3 = new A();
+    A a4 = new A();
+    A a5 = new A();
+    A a6 = new A();
+    A a7 = new A();
+    A a8 = new A();
+    A a9 = new A();
+    A a10 = new A();
+    A a11 = new A();
+    A a12 = new A();
+    A a13 = new A();
+    A a14 = new A();
+    A a15 = new A();
+    A a16 = new A();
+    A a17 = new A();
+    A a18 = new A();
+    A a19 = new A();
+    A a20 = new A();
+    A a21 = new A();
+    A a22 = new A();
+    A a23 = new A();
+    A a24 = new A();
+    A a25 = new A();
+    A a26 = new A();
+    A a27 = new A();
+    A a28 = new A();
+    A a29 = new A();
+    A a30 = new A();
+    A a31 = new A();
+    A a32 = new A();
+    A a33 = new A();
+    A a34 = new A();
+    A a35 = new A();
+    A a36 = new A();
+    A a37 = new A();
+    A a38 = new A();
+    A a39 = new A();
+    A a40 = new A();
+    A a41 = new A();
+    A a42 = new A();
+    A a43 = new A();
+    A a44 = new A();
+    A a45 = new A();
+    A a46 = new A();
+    A a47 = new A();
+    A a48 = new A();
+    A a49 = new A();
+    A a50 = new A();
+    A a51 = new A();
+    A a52 = new A();
+    A a53 = new A();
+    A a54 = new A();
+    A a55 = new A();
+    A a56 = new A();
+    A a57 = new A();
+    A a58 = new A();
+    A a59 = new A();
+    A a60 = new A();
+    A a61 = new A();
+    A a62 = new A();
+    A a63 = new A();
+    A a64 = new A();
+    A a65 = new A();
+    A a66 = new A();
+    A a67 = new A();
+    A a68 = new A();
+    A a69 = new A();
+    A a70 = new A();
+    A a71 = new A();
+    A a72 = new A();
+    A a73 = new A();
+    A a74 = new A();
+    A a75 = new A();
+    A a76 = new A();
+    A a77 = new A();
+    A a78 = new A();
+    A a79 = new A();
+    A a80 = new A();
+    A a81 = new A();
+    A a82 = new A();
+    A a83 = new A();
+    A a84 = new A();
+    A a85 = new A();
+    A a86 = new A();
+    A a87 = new A();
+    A a88 = new A();
+    A a89 = new A();
+    A a90 = new A();
+    A a91 = new A();
+    A a92 = new A();
+    A a93 = new A();
+    A a94 = new A();
+    A a95 = new A();
+    A a96 = new A();
+    A a97 = new A();
+    A a98 = new A();
+    A a99 = new A();
+
+    NoVar nV = new NoVar();
+}

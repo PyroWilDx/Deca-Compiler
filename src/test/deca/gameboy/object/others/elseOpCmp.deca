@@ -1,0 +1,91 @@
+class A {
+    int x;
+    int y;
+    int z;
+}
+
+{
+    A a = new A();
+    boolean b;
+
+    if (a != null) {
+
+    } else {
+        println();
+    }
+
+    if (!(a == null)) {
+
+    } else {
+        println();
+    }
+
+    if (a == null) {
+        println();
+    }
+
+    if (!(a != null)) {
+        println();
+    }
+
+    b = a != null;
+    if (!b) {
+        println();
+    }
+
+    b = !(a == null);
+    if (!b) {
+        println();
+    }
+
+    b = a == null;
+    if (b) {
+        println();
+    }
+
+    b = !(a != null);
+    if (b) {
+        println();
+    }
+
+    a = null;
+    if (a == null) {
+         
+    } else {
+        println();
+    }
+
+    if (!(a != null)) {
+
+    } else {
+        println();
+    }
+    
+    if (a != null) {
+        println();
+    }
+
+    if (!(a == null)) {
+        println();
+    }
+
+    b = a != null;
+    if (b) {
+        println();
+    }
+
+    b = !(a == null);
+    if (b) {
+        println();
+    }
+
+    b = a == null;
+    if (!b) {
+        println();
+    }
+
+    b = !(a != null);
+    if (!b) {
+        println();
+    }
+}

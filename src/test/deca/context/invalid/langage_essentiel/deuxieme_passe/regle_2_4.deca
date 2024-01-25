@@ -1,0 +1,9 @@
+// Description:
+//    regle 2.4 condition
+//
+// Resultats:
+//    Ligne 8: Field 'a' already defined.
+class A {
+    int a;
+    float a;
+}

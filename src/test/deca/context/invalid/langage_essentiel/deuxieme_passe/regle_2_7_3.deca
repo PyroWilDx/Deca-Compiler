@@ -1,0 +1,13 @@
+// Description:
+//    regle 2.7 condition, subtype
+//
+// Resultats:
+//    Ligne 11: Return type of override must be subtype of the return type of the method declared in super class.
+class A {
+    float f(int x) {
+    }
+}
+class B extends A {
+    int f(int x){
+    }
+}

@@ -1,0 +1,16 @@
+class C{
+
+}
+
+{
+    C c;
+    if( c instanceof C){
+        print("");
+    }
+    if( null instanceof C){
+        print("");
+    }
+    if(c instanceof Object){
+        print("");
+    }
+}

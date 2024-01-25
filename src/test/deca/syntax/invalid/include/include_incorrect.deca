@@ -1,0 +1,11 @@
+// Description:
+//    tests de programme incorrect lexicalement (caractère dièse non autorisé)
+//
+// Resultats:
+//    ligne 10 : Erreur, token recognition error at: include "sansMain.decah"
+//
+// Historique:
+//    cree le 01/01/2024
+
+# include "sansMain.decah"
+

@@ -1,0 +1,74 @@
+class A {
+    B b = new B();
+    B b2 = new B();
+    C c = new C();
+
+    void init() {
+        if (b.x != 1) {
+            println();
+        }
+        if (b.y != 42) {
+            println();
+        }
+        if (b2.x != 1) {
+            println();
+        }
+        if (b2.y != 42) {
+            println();
+        }
+        if (c.x != 2) {
+            println();
+        }
+        if (c.y != 4) {
+            println();
+        }
+    }
+
+    void check() {
+        if (b.x != 1) {
+            println();
+        }
+        if (b.y != 42) {
+            println();
+        }
+        if (b2.x != 1) {
+            println();
+        }
+        if (b2.y != 42) {
+            println();
+        }
+        if (c.x != 2) {
+            println();
+        }
+        if (c.y != 4) {
+            println();
+        }
+    }
+
+}
+
+class B {
+    int x = 1;
+    int y = 42;
+}
+
+class C {
+    int x = 2;
+    int y = 4;
+}
+
+{
+    A a = new A();
+    if (a.b.x != 1) {
+        println();
+    }
+    a.init();
+    a.check();
+
+    if (a.b.x != 1) {
+        println();
+    }
+    if (a.b.y != 42) {
+        println();
+    }
+}

@@ -1,0 +1,354 @@
+{
+    boolean debugMode = false;
+    int x = 4;
+    boolean b0;
+
+    if (debugMode) { println(0); }
+    if (x >= 0 && x <= 5) {
+
+    } else {
+        println("x n'est pas dans l'intervalle [0, 5]");
+    }
+
+    b0 = true;
+    if (debugMode) { println(1); }
+    if (!b0) {
+        println("KO_1");
+    }
+
+    b0 = false;
+    if (debugMode) { println(2); }
+    if (b0) {
+        println("KO_2");
+    }
+
+    b0 = false;
+    b0 = !b0 || (x == 1 / 0); // true
+    if (debugMode) { println(3); }
+    if (!b0) {
+        println("KO_3");
+    }
+
+    b0 = false;
+    b0 = b0 && (x == 1 / 0); // false
+    if (debugMode) { println(4); }
+    if (b0) {
+        println("KO_4");
+    }
+
+    b0 = b0 || !b0 || (x == 1 / 0); // true
+    if (debugMode) { println(5); }
+    if (!b0) {
+        println("KO_5");
+    }
+
+    b0 = b0 && !b0 && (x == 1 / 0); // false
+    if (debugMode) { println(6); }
+    if (b0) {
+        println("KO_6");
+    }
+
+    b0 = true;
+    if (debugMode) { println(7); }
+    if (!b0) {
+        println("KO_7");
+    }
+
+    b0 = true;
+    b0 = !!!!b0; // true
+    if (debugMode) { println(8); }
+    if (!b0) {
+        println("KO_8");
+    }
+
+    b0 = true;
+    b0 = !!!!!b0; // false
+    if (debugMode) { println(9); }
+    if (b0) {
+        println("KO_9");
+    }
+
+    b0 = (x >= 0) || (x == 1 / 0); // true
+    if (debugMode) { println(10); }
+    if (!b0) {
+        println("KO_10");
+    }
+
+    b0 = (x < 0) && (x == 1 / 0); // false
+    if (debugMode) { println(11); }
+    if (b0) {
+        println("KO_11");
+    }
+
+    b0 = !((x >= 0) || (x == 1 / 0)); // false
+    if (debugMode) { println(12); }
+    if (b0) {
+        println("KO_12");
+    }
+
+    b0 = !((x < 0) && (x == 1 / 0)); // true
+    if (debugMode) { println(13); }
+    if (!b0) {
+        println("KO_13");
+    }
+
+    b0 = (x >= 0) && (x >= 1) || (x >= 0) || (x == 1 / 0); // true
+    if (debugMode) { println(14); }
+    if (!b0) {
+        println("KO_14");
+    }
+
+    b0 = (x >= 0) && (x >= 1) || (x < 0) || (x == 0); // true
+    if (debugMode) { println(15); }
+    if (!b0) {
+        println("KO_15");
+    }
+
+    b0 = (x <= 0) || (x <= 1) && (x == 4) && (x <= 10); // false
+    if (debugMode) { println(16); }
+    if (b0) {
+        println("KO_16");
+    }
+
+    b0 = (x >= 0) || (x <= 0) && (x != 4) && (x < 1); // true
+    if (debugMode) { println(17); }
+    if (!b0) {
+        println("KO_17");
+    }
+
+    b0 = !((x >= 0) || (x == 1 / 0)) || !((x < 0) && (x == 1 / 0)); // true
+    if (debugMode) { println(18); }
+    if (!b0) {
+        println("KO_18");
+    }
+
+    b0 = !((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0)); // false
+    if (debugMode) { println(19); }
+    if (b0) {
+        println("KO_19");
+    }
+
+    b0 = (x >= 0) && (x >= 0) && (x >= 0) && (x < 0); // false
+    if (debugMode) { println(20); }
+    if (b0) {
+        println("KO_20");
+    }
+
+    b0 = (x < 0) || (x < 0) || (x < 0) || (x < 0); // false
+    if (debugMode) { println(21); }
+    if (b0) {
+        println("KO_21");
+    }
+
+    b0 = (x < 0) || (x < 0) || (x < 0) || (x > 0); // true
+    if (debugMode) { println(22); }
+    if (!b0) {
+        println("KO_22");
+    }
+
+    b0 = (x == 0) && (x == 101) && (x == 102) || (x == 103) || (x == 104) &&
+         (x == 105) || (x == 106) && (x == 107) || (x == 108) && (x == 4); // false
+    if (debugMode) { println(23); }
+    if (b0) {
+        println("KO_23");
+    }
+
+    b0 = (x == 0) && (x == 101) && (x == 102) || (x == 103) || (x == 104) &&
+         (x == 105) || (x == 106) && (x == 107) || (x == 108) || (x == 4); // true
+    if (debugMode) { println(24); }
+    if (!b0) {
+        println("KO_24");
+    }
+
+    b0 = (x == 0) && (x == 101) && (x == 102) || (x == 103) || (x == 104) &&
+         (x == 105) || (x == 106) && (x == 107) || (x == 108) || (x == 109); // false
+    if (debugMode) { println(25); }
+    if (b0) {
+        println("KO_25");
+    }
+
+    b0 = (x == 0) && (x == 101) && (x == 102) || (x == 103) || (x == 104) &&
+        (x == 105) || (x == 106) && (x == 107) || (x == 108) && (x == 109); // false
+    if (debugMode) { println(26); }
+    if (b0) {
+        println("KO_26");
+    }
+
+    b0 = (x == 0) && (x == 101) && (x == 102) || (x == 103) || (x == 104) &&
+        (x == 4) || (x == 106) && (x == 107) || (x == 108) || (x == 109); // false
+    if (b0) {
+        println("KO_27");
+    }
+
+    b0 = (x == 0) && (x == 101) && (x == 102) || (x == 103) || (x == 104) &&
+        (x == 105) || (x == 4) && (x == 107) || (x == 108) || (x == 109); // false
+    if (debugMode) { println(28); }
+    if (b0) {
+        println("KO_28");
+    }
+
+    b0 = (x == 0) && (x == 101) && (x == 102) || (x == 103) || (x == 104) &&
+        (x == 105) || (x == 4) || (x == 107) || (x == 108) || (x == 109); // true
+    if (debugMode) { println(29); }
+    if (!b0) {
+        println("KO_29");
+    }
+
+    b0 = (x == 0) && (x == 101) && (x == 102) || (x == 103) || (x == 104) &&
+        (x == 105) && (x == 4) && (x == 107) || (x == 108) || (x == 109); // false
+    if (debugMode) { println(30); }
+    if (b0) {
+        println("KO_30");
+    }
+
+    b0 = !!!((x == 0) && (x == 101) && (x == 102) || (x == 103) || (x == 104) &&
+                  (x == 105) && (x == 4) && (x == 107) || (x == 108) || (x == 109))
+         &&
+         !((x >= 0) && (x >= 0) && (x >= 0) && (x < 0))
+         &&
+         (!!!!!(!((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0))) && !!true)
+         &&
+         (!((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0)) || ((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0)))
+         &&
+         true; // true
+    if (debugMode) { println(31); }
+    if (!b0) {
+        println("KO_31");
+    }
+
+    b0 = !!((x == 0) && (x == 101) && (x == 102) || (x == 103) || (x == 104) &&
+                  (x == 105) && (x == 4) && (x == 107) || (x == 108) || (x == 109))
+         ||
+         ((x >= 0) && (x >= 0) && (x >= 0) && (x < 0))
+         ||
+         !(!!!!!(!((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0))) && !!true)
+         ||
+         !(!((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0)) || ((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0)))
+         ||
+         false; // false
+    if (debugMode) { println(32); }
+    if (b0) {
+        println("KO_32");
+    }
+
+    b0 = !!!((x == 0) && (x == 101) && (x == 102) || (x == 103) || (x == 104) &&
+                  (x == 105) && (x == 4) && (x == 107) || (x == 108) || (x == 109))
+         &&
+         !((x >= 0) && (x >= 0) && (x >= 0) && (x < 0))
+         &&
+         (!!!!!(!((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0))) && !!true)
+         &&
+         !(!((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0)) || ((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0)))
+         &&
+         true; // false
+    if (debugMode) { println(33); }
+    if (b0) {
+        println("KO_33");
+    }
+
+    b0 = !!((x == 0) && (x == 101) && (x == 102) || (x == 103) || (x == 104) &&
+                  (x == 105) && (x == 4) && (x == 107) || (x == 108) || (x == 109))
+         ||
+         ((x >= 0) && (x >= 0) && (x >= 0) && (x < 0))
+         ||
+         !(!!!!!(!((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0))) && !!true)
+         ||
+         !(!((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0)) || ((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0)))
+         ||
+         (!((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0)) || ((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0)))
+         ||
+         false; // true
+    if (debugMode) { println(34); }
+    if (!b0) {
+        println("KO_34");
+    }
+
+    if ((!!!((x == 0) && (x == 101) && (x == 102) || (x == 103) || (x == 104) &&
+                 (x == 105) && (x == 4) && (x == 107) || (x == 108) || (x == 109))
+        &&
+        !((x >= 0) && (x >= 0) && (x >= 0) && (x < 0))
+        &&
+        (!!!!!(!((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0))) && !!true)
+        &&
+        (!((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0)) || ((x >= 0) || (x == 1 / 0)) && !((x < 0) && (x == 1 / 0)))
+        &&
+        true) != true) {
+        println("KO_35");
+    }
+
+    if (!((x >= 0) || (x == 1 / 0)) ==
+        (!((x >= 0) || (x == 1 / 0)) || !((x < 0) && (x == 1 / 0)))) {
+        println("KO_36");
+    }
+
+    b0 = (false == true);
+    if (b0) {
+        println("KO_37");
+    }
+
+    b0 = (false == false);
+    if (!b0) {
+        println("KO_38");
+    }
+
+    b0 = (true != true);
+    if (b0) {
+        println("KO_39");
+    }
+
+    b0 = (false != false);
+    if (b0) {
+        println("KO_40");
+    }
+
+    b0 = (false != true);
+    if (!b0) {
+        println("KO_41");
+    }
+
+    b0 = (true != false);
+    if (!b0) {
+        println("KO_42");
+    }
+
+    b0 = x <= 4;
+    if (!b0) {
+        println("KO_43");
+    }
+
+    b0 = !(x <= 4);
+    if (b0) {
+        println("KO_44");
+    }
+
+    b0 = x >= 4;
+    if (!b0) {
+        println("KO_45");
+    }
+
+    b0 = !(x >= 4);
+    if (b0) {
+        println("KO_46");
+    }
+
+    b0 = x < 4;
+    if (b0) {
+        println("KO_47");
+    }
+
+    b0 = !(x < 4);
+    if (!b0) {
+        println("KO_48");
+    }
+
+    b0 = x > 4;
+    if (b0) {
+        println("KO_49");
+    }
+
+    b0 = !(x > 4);
+    if (!b0) {
+        println("KO_50");
+    }
+}
+

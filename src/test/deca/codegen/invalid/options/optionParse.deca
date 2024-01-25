@@ -1,0 +1,113 @@
+// Description :
+//    Test de l'option -p
+//
+// Resultats :
+//    !! SI EXECUTION AVEC L'OPTION -p !!
+//    Ne doit pas créer d'exécutable, mais doit compiler sans problème.
+//    Le compilateur affiche le programme :
+//    class A extends Object {
+//        int a;
+//        float method(int b, float c) {
+//            (this.a = b);
+//            return c;
+//        }
+//        void methodAsm()
+//        asm("CODE ASS");
+//    }
+//    {
+//        A class1 = new A();
+//        int x = 1;
+//        float y = 2;
+//        float z = 0x1.3851ecp0;
+//        boolean bool = false;
+//        println((1 / 0));
+//        if (((class1 != null) && (!bool))) {
+//            (class1.a = 1);
+//            (z = class1.method(x, z));
+//        } else {
+//        }
+//        ;
+//        (z = ((x + y) - (x * (x + y))));
+//        print(x, y, z);
+//        println("z = ", z);
+//        printlnx(y, z);
+//        if ((y == z)) {
+//            (y = z);
+//        } else {
+//            (y = (z - 1));
+//        }
+//        while (false) {
+//            if ((y != z)) {
+//                if ((y < z)) {
+//                    if ((y > z)) {
+//                        (x = readInt());
+//                    } else {
+//                        (y = 4);
+//                    }
+//                } else {
+//                }
+//            } else {
+//                while (false) {
+//                    print();
+//                }
+//            }
+//            (y = readFloat());
+//        }
+//        x;
+//        y;
+//        z;
+//    }
+
+
+class A {
+    int a;
+    float method(int b,float c){
+        this.a=b;
+        return c;
+    }
+    void methodAsm() asm("CODE ASS");
+}
+{
+    A class1 = new A();
+    int x = 1;
+    float y = 2;
+    float z = 1.22000e+00;
+    boolean bool = false;
+    println(1 / 0);
+    if(class1 != null && !bool){
+        class1.a = 1;
+        z = class1.method(x,z);
+    }
+    ;
+    z = x + y - x * (x + y);
+    print(x, y, z);
+    println("z = ", z);
+    printlnx(y, z);
+
+    if (y == z) {
+        y = z;
+    } else {
+        y = z - 1;
+    }
+
+    while (false) {
+        if (y != z) {
+            if (y < z) {
+                if (y > z) {
+                    x = readInt();
+                } else {
+                    y = 4;
+                }
+            }
+        } else {
+            while (false) {
+                print();
+            }
+        }
+        y = readFloat();
+    }
+
+    x;
+    y;
+    z;
+}

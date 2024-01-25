@@ -1,0 +1,14 @@
+// Description :
+//    Test de déréférencement d'un pointeur null
+//
+// Resultats :
+//    Error: Dereferencing Null Pointer
+
+class A {
+    int x;
+}
+
+{
+    A a = null;
+    println(a.x);
+}

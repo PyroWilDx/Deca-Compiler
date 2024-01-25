@@ -1,0 +1,81 @@
+// Description :
+//    Test du instanceof
+//
+// Resultats :
+//    OK1 OK2 OK3 OK4 OK5 OK6 OK7 OK8 OK9 OK10 OK11 OK12 OK13 OK14 OK15 OK16
+
+class A { }
+
+class B1 extends A { }
+
+class C1 extends B1 { }
+
+class D1 extends C1 { }
+
+class B2 extends A { }
+
+class C2 extends A {
+    B1 getB1() {
+        return new B1();
+    }
+}
+
+{
+    A a;
+    B2 b2;
+    C2 c2;
+    boolean b = false;
+
+    a = new C1();
+    if (a instanceof C1) { print("OK1 "); } else { println("FAIL"); }
+    if ((b = (a instanceof C1))) { } else { println("FAIL"); }
+    if (!b) { println("FAIL"); }
+    if (a instanceof B1) { print("OK2 "); } else { println("FAIL"); }
+    b = false;
+    if ((b = (a instanceof B1))) { } else { println("FAIL"); }
+    if (!b) { println("FAIL"); }
+    if (a instanceof A) { print("OK3 "); } else { println("FAIL"); }
+    b = false;
+    if ((b = (a instanceof A))) { } else { println("FAIL"); }
+    if (!b) { println("FAIL"); }
+
+    a = new B1();
+    if (a instanceof C1) { println("FAIL"); } else { print("OK4 "); }
+    if (a instanceof B1) { print("OK5 "); } else { println("FAIL"); }
+    if (a instanceof A) { print("OK6 "); } else { println("FAIL"); }
+    b = a instanceof C1;
+    if (b) { println("FAIL"); }
+    b = a instanceof B1;
+    if (!b) { println("FAIL"); }
+
+    a = new A();
+    if (a instanceof C1) { println("FAIL"); } else { print("OK7 "); }
+    if (a instanceof B1) { println("FAIL"); } else { print("OK8 "); }
+    if (a instanceof A) { print("OK9 "); } else { println("FAIL"); }
+
+    a = new C1();
+    if (a instanceof B2) { println("FAIL"); } else { print("OK10 "); }
+
+    a = new C2();
+    if (a instanceof B2) { println("FAIL"); } else { print("OK11 "); }
+    if (!(a instanceof B2)) { print("OK12 "); } else { println("FAIL"); }
+    if (!(a instanceof C2)) { println("FAIL"); } else { print("OK13 "); }
+    if (a instanceof C2) { print("OK14 "); } else { println("FAIL "); }
+    b = !(a instanceof B2);
+    if (!b) { println("FAIL"); }
+    b = !(a instanceof C2);
+    if (b) { println("FAIL"); }
+
+    b2 = new B2();
+    if (b2 instanceof B2) { print("OK15 "); } else { println("FAIL"); }
+    if (b2 instanceof C2) { println("FAIL"); } else { print("OK16 "); }
+
+    if (new C1() instanceof A) { print("OK17 "); } else { println("FAIL"); }
+    if (new A() instanceof B1) { println("FAIL"); } else { print("OK18 "); }
+
+    c2 = new C2();
+    if (c2.getB1() instanceof A) { print("OK19 "); } else { println("FAIL"); }
+    if (!(c2.getB1() instanceof C1)) { println("OK20"); } else { println("FAIL"); }
+    b = !(c2.getB1() instanceof C1);
+    if (!b) { println("FAIL"); }
+}

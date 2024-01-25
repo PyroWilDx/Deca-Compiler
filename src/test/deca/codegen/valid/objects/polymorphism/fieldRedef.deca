@@ -1,0 +1,23 @@
+// Description :
+//    Test du polymorphisme sur une sélection d'attrbut
+//
+// Resultats :
+//    1 2 1
+
+class A {
+    int x = 1;
+
+}
+
+class B extends A {
+    int x = 2;
+}
+
+{
+      A a = new A();
+      B b1 = new B();
+      A b2 = new B();
+      print(a.x, " ");
+      print(b1.x, " ");
+      println(b2.x); // en Java ça fait 1, donc ici aussi logiquement
+}

@@ -1,0 +1,24 @@
+// Description :
+//    Test de l'héritage avec un attribut redéfini
+//
+// Resultats :
+//    1 2
+//    4 2 0
+
+class A {
+    int x = 1;
+    int y = 2;
+}
+
+class B extends A {
+    int x = 4;
+    int z;
+}
+
+{
+    A a = new A();
+    B b = new B();
+
+    println(a.x, " ", a.y);
+    println(b.x, " ", b.y, " ", b.z);
+}

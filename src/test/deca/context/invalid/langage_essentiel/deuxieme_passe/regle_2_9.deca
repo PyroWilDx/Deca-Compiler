@@ -1,0 +1,9 @@
+// Description:
+//    regle 2.9 type = void
+//
+// Resultats:
+//    Ligne 7: Parameter type cannot be void.
+class A {
+    void f(void x) {
+    }
+}

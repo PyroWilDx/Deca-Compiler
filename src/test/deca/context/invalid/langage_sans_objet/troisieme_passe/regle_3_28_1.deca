@@ -1,0 +1,10 @@
+// Description:
+//    regle 3.28 condition assign compatible
+//
+// Resultats:
+//    Ligne 7: type 'float' must be compatible with type 'int'.
+{
+    int a = 1.0;
+}
+// raison : condition assign compatible
+// message : type 'float' must be compatible with type 'int'

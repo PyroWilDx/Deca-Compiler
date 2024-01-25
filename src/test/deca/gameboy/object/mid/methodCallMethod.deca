@@ -1,0 +1,71 @@
+// Description :
+//    Test d'une méthode qui appelle une autre méthode d'une même classe
+//
+// Resultats :
+//    10 20 30
+//    80 70 60
+//    180 170 160
+//    110 120 130
+//    80 70 60
+//    180 170 160
+
+class A {
+    int x;
+    int y;
+    int z;
+
+    int method1(int a, int b, int c) {
+        x = 1;
+        y = 2;
+        z = 3;
+
+        return method2(b, a, c); // 5 4 6
+    }
+
+    int method2(int c, int b, int a) { // 5 4 6
+        int x = (a * 2) + (b * 4) + (c * 6); // 6*2 + 4*4 + 5*6 = 12 + 16 + 30 = 58
+        if (c != 5) {
+            println();
+        }
+        if (b != 4) {
+            println();
+        }
+        if (a != 6) {
+            println();
+        }
+        if (this.x != 1) {
+            println();
+        }
+        if (y != 2) {
+            println();
+        }
+        if (z != 3) {
+            println();
+        }
+        this.x = 10;
+        y = 11;
+        z = 12;
+        if (x != 58) {
+            println();
+        }
+        return x; // 58
+    }
+}
+
+{
+    A a = new A();
+    int x = a.method1(4, 5, 6);
+
+    if (x != 58) {
+        println();
+    }
+    if (a.x != 10) {
+        println();
+    }
+    if (a.y != 11) {
+        println();
+    }
+    if (a.z != 12) {
+        println();
+    }
+}

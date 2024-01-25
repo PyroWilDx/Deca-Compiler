@@ -1,0 +1,14 @@
+// Description:
+//    regle 3.73, signature non vide
+//
+// Resultats:
+//    Ligne 13: Too few arguments, expected type : 'float'.
+class A {
+    void f(int x, float y){
+    }
+}
+{
+    A a = new A();
+    int x = 1;
+    a.f(x);
+}

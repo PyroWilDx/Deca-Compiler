@@ -1,0 +1,77 @@
+// Description :
+//    Test du cast
+//
+// Resultats :
+//    1.00000e+01 20 10 30 60 4.20000e+01 42 1.00000e+01
+
+class A {
+    float getValF() {
+        return 10.0;
+    }
+}
+
+class B extends A {
+    int fB() {
+        return 42;
+    }
+}
+
+class C extends A {
+    float getValF() {
+        return 30.0;
+    }
+
+    int fC() {
+        return 60;
+    }
+}
+
+{
+    A a = new A();
+    B b;
+    C c;
+    int x = 10;
+    int y = (int)(20);
+    int z = (int)(a.getValF());
+    float f;
+
+    print((float)(x), " ");
+    print(y, " ");
+    print(z, " ");
+
+    a = new C();
+    z = (int)(a.getValF());
+    print(z, " ");
+    c = (C)(a);
+    z = c.fC();
+    print(z, " ");
+
+    a = new B();
+    b = (B)(a);
+    f = (float)(b.fB());
+    print(f, " ");
+
+    b = (B)(b);
+    z = b.fB();
+    print(z, " ");
+    f = b.getValF();
+    println(f);
+
+    a = null;
+    c = (C)(a);
+
+    if (c != null) {
+        println("FAIL");
+    }
+
+    c = new C();
+    c = (C)(null);
+    b = (B)(null);
+
+    if (c != null) {
+        println("FAIL");
+    }
+    if (b != null) {
+        println("FAIL");
+    }
+}

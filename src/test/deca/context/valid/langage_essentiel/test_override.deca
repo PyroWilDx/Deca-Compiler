@@ -1,0 +1,10 @@
+class A {
+    A f(float x, A other) {}
+    Object g(){}
+
+}
+class B extends A {
+    // Override avec type de reour compatible
+    B f(float x, A other) {}
+    A g(){}
+}

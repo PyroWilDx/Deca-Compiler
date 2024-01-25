@@ -1,0 +1,10 @@
+// Description:
+//    regle 3.24, return type void
+//
+// Resultats:
+//    Ligne 8: Cannot use 'return' in void method.
+class A {
+    void f(int x) {
+        return x;
+    }
+}

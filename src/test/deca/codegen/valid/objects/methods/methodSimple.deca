@@ -1,0 +1,19 @@
+// Description :
+//    Test d'une classe avec une méthode simple
+//
+// Resultats :
+//    Ne doit rien afficher
+
+class A {
+    int x;
+    int y;
+
+    void simpleMethod() {
+        println("println() of simpleMethod()");
+        printlnx(3.14);
+    }
+}
+
+{
+
+}

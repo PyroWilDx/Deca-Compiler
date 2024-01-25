@@ -1,0 +1,24 @@
+class A {
+    protected int x = 2;
+
+    void thisX() {
+        if (this.x != 2) {
+            println();
+        }
+        if (this.x != 2) {
+            println();
+        }
+        if (this.x != 2) {
+            println();
+        }
+        this.x = 6;
+        if (this.x != 6) {
+            println();
+        }
+    }
+}
+
+{
+    A a = new A();
+    a.thisX();
+}

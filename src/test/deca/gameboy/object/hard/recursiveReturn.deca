@@ -1,0 +1,17 @@
+class A {
+    int fact(int i, int n) {
+        if (i == n) {
+            return n;
+        }
+        return i * fact(i + 1, n) * 1;
+    }
+}
+
+{
+    A a = new A();
+    int x = a.fact(1, 5);
+
+    if (x != 120) {
+        println();
+    }
+}

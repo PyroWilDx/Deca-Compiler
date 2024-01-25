@@ -1,0 +1,25 @@
+class A {
+    int a = 10;
+    int b = this.a;
+
+    void method() {
+        if (a != 10) {
+            println();
+        }
+        if (b != 10) {
+            println();
+        }
+        b = 20;
+    }
+}
+
+{
+    A a = new A();
+    a.method();
+    if (a.a != 10) {
+        println();
+    }
+    if (a.b != 20) {
+        println();
+    }
+}

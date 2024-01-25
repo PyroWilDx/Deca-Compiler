@@ -1,0 +1,14 @@
+// Description:
+//    regle 3.70, pas un champs
+//
+// Resultats:
+//    Ligne 13: 'f' must be a field.
+class A {
+    int f() {
+    return 1;
+    }
+}
+{
+    A a = new A();
+    a.f = 2;
+}

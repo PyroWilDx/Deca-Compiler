@@ -1,0 +1,9 @@
+// Description:
+//    regle 1.3 condition
+//
+// Resultats:
+//    Ligne 6: A class identifier is required.
+class A extends int {
+}
+// raison : condition
+// message : «A class identifier is required»

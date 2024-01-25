@@ -1,0 +1,16 @@
+// Description :
+//    Test d'appel d'une méthode simple d'une classe
+//
+// Resultats :
+//    Method Called
+
+class A {
+    void method() {
+        println("Method Called");
+    }
+}
+
+{
+    A a = new A();
+    a.method();
+}

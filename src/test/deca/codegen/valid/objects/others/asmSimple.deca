@@ -1,0 +1,36 @@
+// Description :
+//    Test de la fonction asm
+//
+// Resultats :
+//    10 180 2 4
+
+class A {
+    void testAsm(int x, int y)
+    asm(
+    "    LOAD #80, R14
+    LOAD #100, R12
+    ADD R14, R12
+    LOAD R12, R0
+    LOAD R0, R1
+    PUSH R1
+    LOAD #10, R1
+    WINT
+    WSTR \" \"
+    POP R1
+    WINT
+    WSTR \" \"
+    LOAD -3(LB), R1
+    WINT
+    WSTR \" \"
+    LOAD -4(LB), R1
+    WINT
+    WNL
+    RTS"
+    );
+
+}
+
+{
+    A a = new A();
+    a.testAsm(2, 4);
+}

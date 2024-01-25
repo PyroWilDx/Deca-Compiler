@@ -1,0 +1,11 @@
+// Description :
+//    Test de lecture d'un float invalide
+//
+// Resultats :
+//    Pour que l'erreur se produise, il faut entrer un float invalide
+//    Dans ce cas, il s'affiche : Error: Input/Output Error
+//    Sinon, il ne s'affiche rien
+
+{
+    readFloat();
+}

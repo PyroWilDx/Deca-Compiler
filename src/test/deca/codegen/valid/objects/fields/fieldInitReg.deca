@@ -1,0 +1,24 @@
+// Description :
+//    Test d'une classe avec des attributs où l'initialisation nécéssite
+//    d'autres registres que R0 et R1
+//
+// Resultats :
+//    1 20 2
+
+class A {
+    int a = 1;
+    int b = (1 + (1 + (1 + (1 + (1 +
+            (1 + (1 + (1 + (1 + (1 +
+            (1 + (1 + (1 + (1 + (1 +
+            (1 + (1 + (1 + (1 + (1
+            )))))
+            )))))
+            )))))
+            )))));
+    int c = 2;
+}
+
+{
+    A a = new A();
+    println(a.a, " ", a.b, " ", a.c);
+}

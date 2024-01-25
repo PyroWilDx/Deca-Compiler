@@ -1,0 +1,23 @@
+class Fibonacci {
+    int fibo(int n) {
+        if (n <= 1) {
+            return n;
+        } else {
+            return fibo(n - 1) + fibo(n - 2);
+        }
+    }
+}
+    {
+    int a;
+    int i=0;
+    Fibonacci f = new Fibonacci();
+    println("Entrer le nombre de premiers éléments de la suite de Fibonacci que vous souhaitez:");
+    a=readInt();
+    println("Les ",a," premiers éléments de la suite de Fibonacci sont:");
+    while (i<a) {
+         print(f.fibo(i));
+         print(", ");
+         i=i+1;
+    }
+    println();
+}

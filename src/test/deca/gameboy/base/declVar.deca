@@ -1,0 +1,23 @@
+{
+    int x = 1;
+    int y = 42;
+    float z = 3.1416;
+    boolean b0 = true;
+    boolean b1 = false;
+
+    if (x != 1) {
+        println();
+    }
+    if (y != 42) {
+        println();
+    }
+    if (z != 3) {
+        println();
+    }
+    if (!b0) {
+        println();
+    }
+    if (b1) {
+        println();
+    }
+}

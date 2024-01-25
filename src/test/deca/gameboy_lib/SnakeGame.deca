@@ -1,0 +1,61 @@
+#include "GameBoy.decah"
+#include "Snake.decah"
+
+#includeTiles "snakeTiles"
+
+{
+    boolean update = false;
+    Snake snake = new Snake();
+    boolean a = true;
+    int frameCount = 0;
+    int i = 0;
+    GameBoy gb = new GameBoy();
+    int limiteFrameCount = 30;
+    boolean initScreen = true;
+
+    gb.init();
+    gb.setBackgroundColor(5);
+    gb.updateScreen();
+    print(" a for easy mode ", 1, 7);
+    gb.setColor(gb.WHITE, 18, 7);
+    gb.setColor(gb.WHITE, 18, 10);
+    print(" b for hard mode ", 1, 10);
+    while (initScreen) {
+        update = gb.updateScreen();
+        if (gb.keyPressed(gb.A_KEY)) {
+            limiteFrameCount = 90;
+            initScreen = false;
+        }
+        if (gb.keyPressed(gb.B_KEY)) {
+            initScreen = false;
+        }
+    }
+
+    gb.setBackgroundColor(gb.WHITE);
+    gb.updateScreen();
+
+    snake.initSnake(gb, 6, 6, 20, 18, 15, 15);
+    while (a == true) {
+        update = gb.updateScreen();
+        // Input
+        if (gb.keyPressed(gb.UP_KEY) && snake.getDirection() == snake.HorizontalDirection) {
+            i = 0;
+        }
+        if (gb.keyPressed(gb.DOWN_KEY) && snake.getDirection() == snake.HorizontalDirection) {
+            i = 1;
+        }
+        if (gb.keyPressed(gb.RIGHT_KEY) && snake.getDirection() == snake.VerticalDirection) {
+            i = 2;
+        }
+        if (gb.keyPressed(gb.LEFT_KEY) && snake.getDirection() == snake.VerticalDirection) {
+            i = 3;
+        }
+        if (update) {
+            frameCount = frameCount + 1;
+            if (frameCount == limiteFrameCount) {
+                frameCount = 0;
+                a = snake.move(i);
+            }
+        }
+    }
+}

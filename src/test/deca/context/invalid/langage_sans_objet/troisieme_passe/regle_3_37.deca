@@ -1,0 +1,10 @@
+// Description:
+//    regle 3.37 operation partielle type_binary_op
+//
+// Resultats:
+//    Ligne 7: Unary operation '-' cannot have operand of type : 'string'.
+{
+    int a = - "bonjour";
+}
+// raison : operation partielle type_unary_op
+// message : Unary operation '-' cannot have operand of type : 'string'.

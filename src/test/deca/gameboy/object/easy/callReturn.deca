@@ -1,0 +1,14 @@
+class A {
+    int return10() {
+        return 10;
+    }
+}
+
+{
+    A a = new A();
+    int x = a.return10();
+
+    if (x != 10) {
+        println();
+    }
+}

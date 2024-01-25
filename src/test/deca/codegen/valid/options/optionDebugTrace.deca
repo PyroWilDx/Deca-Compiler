@@ -1,0 +1,18 @@
+// Description :
+//    Test de l'option -d -d -d
+//
+// Resultats :
+//    !! SI EXECUTION AVEC L'OPTION -d -d -d !!
+//    Le compilateur affiche toutes les traces de debug
+//    L'exécution affiche : z = 6
+
+{
+    int x = 1;
+    float y = 2;
+    float z;
+
+    y = 2;
+
+    z = x * y + x + x + y;
+    println("z = ", z);
+}

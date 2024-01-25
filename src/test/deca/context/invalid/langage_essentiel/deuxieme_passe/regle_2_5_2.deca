@@ -1,0 +1,12 @@
+// Description:
+//    regle 2.5 condition
+//
+// Resultats:
+//    Ligne 11: A method 'f' already exists in super class.
+class A {
+    void f() {
+    }
+}
+class B extends A {
+    int f;
+}

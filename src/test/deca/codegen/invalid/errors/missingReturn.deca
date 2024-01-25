@@ -1,0 +1,21 @@
+// Description :
+//    Test de l'erreur où il n'y a pas de return dans une méthode non void
+//
+// Resultats :
+//    Error: Exiting function 'A.missingReturn()'' without return
+
+class A {
+    int x = 10;
+
+    int missingReturn() {
+        if (x == 0) {
+            return 0;
+        }
+    }
+}
+
+{
+    A a = new A();
+    println(a.missingReturn());
+}
+

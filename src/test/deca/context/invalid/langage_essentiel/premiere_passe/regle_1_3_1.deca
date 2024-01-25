@@ -1,0 +1,9 @@
+// Description:
+//    regle 1.3 opération partielle env _types(super)
+//
+// Resultats:
+//    Ligne 6: Undeclared super class identifier : 'B'.
+class A extends B  {
+}
+// raison : opération partielle env _types(super)
+//        	message : “undeclared super class identifier”

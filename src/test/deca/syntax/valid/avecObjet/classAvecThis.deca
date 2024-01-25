@@ -1,0 +1,24 @@
+// Description:
+//    Programme utilisant class , this.
+//
+// Resultats:
+//    class
+//    methodes
+//    main
+//
+// Historique:
+//    cree le 12/01/2024
+class A {
+    int a = 2;
+    int summ(int b){
+        return this.a;
+    }
+    int summ2(){
+        return this.summ(5);
+    }
+}
+{
+    A anass = new A();
+    int c = anass.summ(5);
+    int d = anass.summ2();
+}

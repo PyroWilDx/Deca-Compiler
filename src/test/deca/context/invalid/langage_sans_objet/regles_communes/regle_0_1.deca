@@ -1,0 +1,11 @@
+// Description:
+//    regle 0.1 opération partielle
+//
+// Resultats:
+//    Ligne 7: Undeclared identifier : 'a'.
+{
+    a = 1;
+}
+
+// raison : opération partielle
+// "Identificateur non déclaré"

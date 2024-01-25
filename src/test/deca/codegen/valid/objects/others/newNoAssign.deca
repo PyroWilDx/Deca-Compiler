@@ -1,0 +1,24 @@
+// Description :
+//    Test de création d'un objet avec new (sans assignation) et accès à ses attributs / méthodes
+//
+// Resultats :
+//    42
+//    60
+//    42 60 70
+//    1
+
+class A {
+    int x = 42;
+    int y = 60;
+
+    int method(int z) {
+        println(x, " ", y, " ", z);
+        return 1;
+    }
+}
+
+{
+    println(new A().x);
+    println(new A().y);
+    println(new A().method(70));
+}

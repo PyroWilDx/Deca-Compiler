@@ -1,0 +1,11 @@
+// Description:
+//    regle 2.6 opération partielle
+//
+// Resultats:
+//    Ligne 9: Method 'f' already defined.
+class A {
+    void f(){
+    }
+    int f(){
+    }
+}

@@ -1,0 +1,81 @@
+// Description :
+//    Test de redéfinitions de méthodes dans le désordre
+//
+// Resultats :
+//    A0 A10 A20 A30 A40
+//    A0 B10 B20 B30 A40 B50 B60
+//    A0 C10 B20 B30 C40 B50 C60 C70 C80
+
+class A {
+    void display0() { print("A", 0); }
+
+    void display10() { print("A", 10); }
+
+    void display20() { print("A", 20); }
+
+    void display30() { print("A", 30); }
+
+    void display40() { print("A", 40); }
+}
+
+class B extends A {
+    void display30() { print("B", 30); }
+
+    void display50() { print("B", 50); }
+
+    void display10() { print("B", 10); }
+
+    void display60() { print("B", 60); }
+
+    void display20() { print("B", 20); }
+}
+
+class C extends B {
+    void display60() { print("C", 60); }
+
+    void display70() { print("C", 70); }
+
+    void display10() { print("C", 10); }
+
+    void display40() { print("C", 40); }
+
+    void display80() { print("C", 80); }
+}
+
+{
+    A a = new A();
+    B b = new B();
+    A pB = new B();
+    C c = new C();
+    A pC = new C();
+
+    a.display0(); print(" ");
+    a.display10(); print(" ");
+    a.display20(); print(" ");
+    a.display30(); print(" ");
+    a.display40();
+
+    println();
+
+    pB.display0(); print(" ");
+    pB.display10(); print(" ");
+    pB.display20(); print(" ");
+    pB.display30(); print(" ");
+    pB.display40(); print(" ");
+    b.display50(); print(" ");
+    b.display60();
+
+    println();
+
+    pC.display0(); print(" ");
+    pC.display10(); print(" ");
+    pC.display20(); print(" ");
+    pC.display30(); print(" ");
+    pC.display40(); print(" ");
+    c.display50(); print(" ");
+    c.display60(); print(" ");
+    c.display70(); print(" ");
+    c.display80();
+
+    println();
+}

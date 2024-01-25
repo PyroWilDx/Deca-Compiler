@@ -1,0 +1,25 @@
+// Description :
+//    Test d'une initialisation d'un attribut avec une méthode
+//
+// Resultats :
+//    30 60 10
+
+class A {
+    int a = 20;
+    int b = this.initB();
+    int c = 10;
+
+    int initB() {
+        a = 30;
+        return 2 * a;
+    }
+
+    void displayVars() {
+        println(a, " ", b, " ", c);
+    }
+}
+
+{
+    A a = new A();
+    a.displayVars();
+}

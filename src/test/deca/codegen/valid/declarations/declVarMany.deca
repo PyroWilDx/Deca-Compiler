@@ -1,0 +1,17 @@
+// Description :
+//    Test de plusieurs déclarations de variables
+//
+// Resultats :
+//    x = 1
+//    y = 42 | z = 3.14160e+00
+
+{
+    int x = 1;
+    int y = 42;
+    float z = 3.1416;
+    boolean b0 = true;
+    boolean b1 = false;
+
+    println("x = ", x);
+    println("y = ", y, " | z = ", z);
+}

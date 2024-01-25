@@ -1,0 +1,29 @@
+class A {
+    protected int x = 2;
+
+    void thisX() {
+        if (x != 2) {
+            println();
+        }
+        x = 6;
+        if (x != 6) {
+            println();
+        }
+    }
+
+    void thisXParam(int x) {
+        if (x != 60) {
+            println();
+        }
+        x = 120;
+        if (x != 120) {
+            println();
+        }
+    }
+}
+
+{
+    A a = new A();
+    a.thisX();
+    a.thisXParam(60);
+}

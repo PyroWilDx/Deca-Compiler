@@ -1,0 +1,30 @@
+class A {
+    int x;
+    int y = 1;
+
+    int getSquare(int x) {
+        return x * x;
+    }
+}
+
+{
+    int x = 0;
+    int y = 0;
+    A a = new A();
+
+    if ( (x = a.getSquare(y = 6)) != 36 ) {
+        println();
+    }
+    if (x != 36) {
+        println();
+    }
+    if ( (a.x = a.getSquare(a.y = 6)) != 36 ) {
+        println();
+    }
+    if (a.y != 6) {
+        println();
+    }
+    if (a.x != 36) {
+        println();
+    }
+}

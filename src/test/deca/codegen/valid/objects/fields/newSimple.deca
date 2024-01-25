@@ -1,0 +1,14 @@
+// Description :
+//    Test simple du new
+//
+// Resultats :
+//    Ne doit rien afficher
+
+class A {
+    int x;
+    int y;
+}
+
+{
+    A a = new A();
+}

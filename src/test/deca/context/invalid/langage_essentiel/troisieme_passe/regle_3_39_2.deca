@@ -1,0 +1,18 @@
+// Description:
+//    regle 3.39, condition
+//
+// Resultats:
+//    Ligne 17: Undeclared identifier : 'x'.
+
+
+class C{
+
+}
+
+class B extends C{
+
+}
+
+{
+    C b = (B) (x);
+}

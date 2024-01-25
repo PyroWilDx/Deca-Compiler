@@ -1,0 +1,9 @@
+class A {
+    int a;
+}
+{
+    A class1 = new A();
+    if(class1 != null){
+        return 3;
+    }
+}

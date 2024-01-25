@@ -1,0 +1,44 @@
+// Description :
+//    Test d'une méthode qui appelle une autre méthode d'une autre classe
+//
+// Resultats :
+//    1 2 3 42
+//    42 3 0 0
+
+class A {
+    int x;
+    int y;
+    int z;
+
+    void method(int x, int y, int z, int a, B b) {
+        println(x, " ", y, " ", z, " ", a);
+        b.otherMethod(this.x, this.y, z, a, b);
+    }
+}
+
+class B {
+    int z;
+    int y;
+    int x;
+    int a = 42;
+
+    void method(int y, int z, int x) {
+        A a = new A();
+        a.method(x, y, z, this.a, this);
+        if (this.x != 0 || this.y != 0 || this.z != 0) {
+            println("FAIL");
+        }
+    }
+
+    void otherMethod(int a, int z, int y, int x, B b) {
+        println(x, " ", y,  " ", z, " ", a);
+        if (!this.equals(b)) {
+            println("FAIL");
+        }
+    }
+}
+
+{
+    B b = new B();
+    b.method(2, 3, 1);
+}

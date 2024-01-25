@@ -1,0 +1,70 @@
+class A {
+
+    int add10(int x) {
+        return x + 10;
+    }
+
+    int add20(int x) {
+        return x + 20;
+    }
+
+}
+
+class B {
+
+    int add30(int x) {
+        return x + 30;
+    }
+
+    int getSum(int x, int y) {
+        return x + y;
+    }
+
+}
+
+class C {
+
+    int getSum(int x, int y, int z) {
+        A a = new A();
+        B b = new B();
+        C c = new C();
+
+        if (x == 10 && y == 20 && z == 30) {
+            if (a.add10(x) != 20) {
+                println();
+            }
+
+            if (b.add30(y) != 50) {
+                println();
+            }
+
+            if (a.add10(z) != 40) {
+                println();
+            }
+
+            if (a.add20(x) != 30) {
+                println();
+            }
+
+            if (b.getSum(a.add10(x), b.add30(y)) != 70) {
+                println();
+            }
+        }
+ 
+        if (x == 10 && y == 20 && z == 30) {
+            return c.getSum(b.getSum(a.add10(x), b.add30(y)), a.add10(z), a.add20(x));
+        } else {
+            return x + y + z;
+        }
+    }
+
+}
+
+
+{
+    C c = new C();
+    int x = c.getSum(10, 20, 30);
+    if (x != 140) {
+        println();
+    }
+}

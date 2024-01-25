@@ -1,0 +1,10 @@
+// Description:
+//    test de programme incorrect syntaxiquement (absence du main)
+//
+// Resultats:
+//    ligne 10 : Erreur, print définie hors main
+//
+// Historique:
+//    cree le 01/01/2024
+
+print("hi") ;

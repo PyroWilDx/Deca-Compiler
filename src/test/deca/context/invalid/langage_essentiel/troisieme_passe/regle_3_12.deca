@@ -1,0 +1,9 @@
+// Description:
+//    regle 3.12, opération partielle
+//
+// Resultats:
+//    Ligne 7: Parameter 'x' already exists.
+class A {
+    void f(int x, float x) {
+    }
+}

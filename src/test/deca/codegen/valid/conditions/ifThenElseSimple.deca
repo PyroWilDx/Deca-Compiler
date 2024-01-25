@@ -1,0 +1,191 @@
+// Description :
+//    Test de if/else simple
+//
+// Resultats :
+//    12345678910111213141516
+
+{
+    boolean b;
+
+    if (1 == 1) {
+        print(1);
+    } else {
+        println("KO_1_1");
+    }
+
+    if (0 == 1) {
+        println("KO_2_1");
+    } else {
+        print(2);
+    }
+
+    if (1 != 1) {
+        println("KO_3_1");
+    } else {
+        print(3);
+    }
+
+    if (0 != 1) {
+        print(4);
+    } else {
+        println("KO_4_1");
+    }
+
+    if (false) {
+        println("KO_5_1");
+    } else if (true) {
+        print(5);
+    } else {
+        println("KO_5_2");
+    }
+
+    if (false) {
+        println("KO_6_1");
+    } else if (false) {
+        println("KO_6_2");
+    } else if (false) {
+        println("KO_6_3");
+    } else if (false) {
+        println("KO_6_4");
+    } else {
+        print(6);
+    }
+
+    if (true) {
+        print(7);
+    } else {
+        println("KO_7_1");
+    }
+
+    if (false) {
+        println("KO_8_1");
+    } else {
+        print(8);
+    }
+
+    if (true == false) {
+        println("KO_9_1");
+    } else {
+        print(9);
+    }
+
+    if (false == true) {
+        println("KO_10_1");
+    } else {
+        print(10);
+    }
+
+    if (true == true) {
+        print(11);
+    } else {
+        println("KO_11_1");
+    }
+
+    if (true == true) {
+        print(12);
+    } else {
+        println("KO_12_1");
+    }
+
+    if (true != true) {
+        println("KO_13_1");
+    } else {
+        print(13);
+    }
+
+    if (false != false) {
+        println("KO_14_1");
+    } else {
+        print(14);
+    }
+
+    if (true != false) {
+        print(15);
+    } else {
+        println("KO_15_1");
+    }
+
+    if (false != true) {
+        println(16);
+    } else {
+        println("KO_16_1");
+    }
+
+    if ((1 == 1) == (2 == 1)) {
+        println("FAIL");
+    }
+
+    if (!((1 == 1) == (4 == 4))) {
+        println("FAIL");
+    }
+
+    b = true;
+    if (b == true) {
+
+    } else {
+        println("FAIL");
+    }
+    if (b != true) {
+        println("FAIL");
+    }
+    if (b == false) {
+        println("FAIL");
+    }
+    if (b != false) {
+
+    } else {
+        println("FAIL");
+    }
+
+    if (true == b) {
+
+    } else {
+        println("FAIL");
+    }
+    if (true != b) {
+        println("FAIL");
+    }
+    if (false == b) {
+        println("FAIL");
+    }
+    if (false != b) {
+
+    } else {
+        println("FAIL");
+    }
+
+    b = false;
+    if (b == false) {
+
+    } else {
+        println("FAIL");
+    }
+    if (b != false) {
+        println("FAIL");
+    }
+    if (b == true) {
+        println("FAIL");
+    }
+    if (b != true) {
+
+    } else {
+        println("FAIL");
+    }
+
+    if (false == b) {
+
+    } else {
+        println("FAIL");
+    }
+    if (false != b) {
+        println("FAIL");
+    }
+    if (true == b) {
+        println("FAIL");
+    }
+    if (true != b) {
+
+    } else {
+        println("FAIL");
+    }
+}

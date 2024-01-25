@@ -1,0 +1,9 @@
+class A {
+    int a;
+    public A(){
+        a = 1;
+    }
+}
+{
+    A anass = new A;
+}

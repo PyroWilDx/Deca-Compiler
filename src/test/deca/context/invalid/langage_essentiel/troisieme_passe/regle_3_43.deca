@@ -1,0 +1,8 @@
+// Description:
+//    regle 3.43, condition
+//
+// Resultats:
+//    Ligne 7: 'this' cannot refer to Object class.
+{
+    boolean b = this.equals(0);
+}

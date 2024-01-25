@@ -1,0 +1,16 @@
+// Description:
+//    regle 3.39, condition
+//
+// Resultats:
+//    Ligne 15: Illegal cast.
+
+
+class C{
+    void m(){
+    }
+}
+
+{
+   C c = new C();
+   Object b = (C) (c.m());
+}

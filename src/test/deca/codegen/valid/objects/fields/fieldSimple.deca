@@ -1,0 +1,33 @@
+// Description :
+//    Test d'une classe avec des attributs à initialisation simple
+//
+// Resultats :
+//    Ne doit rien afficher
+
+class A {
+    int v1;
+    int v2 = 1;
+    int v3;
+    int v4 = 4;
+    int v5;
+    boolean v6;
+    int v7;
+    float v8;
+    int v9;
+    boolean v10;
+}
+
+class B {
+    A v1;
+    A v2;
+    A v3;
+    A v4;
+    int v5;
+    int v6;
+    float v7;
+    int v8;
+}
+
+{
+
+}

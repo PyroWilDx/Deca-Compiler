@@ -1,0 +1,35 @@
+// Description :
+//    Test de assign dans une condition de if/else
+//
+// Resultats :
+//    0 0
+//    10 0
+//    OK
+//    36 6
+//    36 100
+
+class A {
+    int getSquare(int x) {
+        return x * x;
+    }
+
+    void displayParams(int x, int y) {
+        println(x, " ", y);
+    }
+}
+
+{
+    int x = 0;
+    int y = 0;
+    A a = new A();
+
+    a.displayParams(x, y);
+    a.displayParams(x = 10, y);
+    if ( (x = a.getSquare(y = 6)) == 36 ) {
+        println("OK");
+    } else {
+        println("FAIL");
+    }
+    a.displayParams(x, y);
+    a.displayParams(x, y = 100);
+}

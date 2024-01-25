@@ -1,0 +1,33 @@
+// Description :
+//    Test des shifts pour les multiplications/divisions par une puissance de 2
+//
+// Resultats :
+//    14 14 112 112 1792 896 224 832 104 0 0 14336 28672 25 50 100 0 0 64
+
+{
+    int x = 7;
+    int y = 13;
+    int z = 200;
+    int a = 8;
+
+    print(x * 2, " ");
+    print(2 * x, " ");
+    print(16 * x, " ");
+    print(x * 16, " ");
+    print(16 * x * 16, " ");
+    print(8 * x * 16, " ");
+    print(2 * x * 16, " ");
+    print(8 * y * 8, " ");
+    print(8 * y, " ");
+    print(0 * y, " ");
+    print(y * 0, " ");
+    print(x * 2048, " ");
+    print(4096 * x, " ");
+
+    print(z / 8, " ");
+    print(z / 4, " ");
+    print(z / 2, " ");
+    print(16 / z, " ");
+    print(2 / x, " ");
+    println(512 / a);
+}

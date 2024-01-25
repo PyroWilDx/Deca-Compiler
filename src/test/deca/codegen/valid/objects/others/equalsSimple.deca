@@ -1,0 +1,143 @@
+// Description :
+//    Test de la fonction equals définie de base dans Object
+//
+// Resultats :
+//    OK1 OK2 OK3 OK4 OK5 OK6
+
+class A {
+    int x;
+}
+
+class B extends A {
+    int y;
+}
+
+{
+    A a = new A();
+    B b = new B();
+    B b2;
+    boolean bool;
+
+    boolean x = a.equals(b);
+
+    if (x) {
+        println("FAIL");
+    }
+
+    x = !a.equals(b);
+    if (!x) {
+        println("FAIL");
+    }
+
+    x = a.equals(a);
+    if (!x) {
+        println("FAIL");
+    }
+
+    x = !a.equals(a);
+    if (x) {
+        println("FAIL");
+    }
+
+    if (a.equals(null)) {
+        println("FAIL");
+    }
+
+    if (b.equals(null)) {
+        println("FAIL");
+    }
+
+    if (a.equals(b)) {
+        println("FAIL");
+    } else {
+        print("OK1 ");
+    }
+
+    if (a.equals(a)) {
+        print("OK2 ");
+    } else {
+        println("FAIL");
+    }
+
+    if (b.equals(a)) {
+        println("FAIL");
+    } else {
+        print("OK3 ");
+    }
+
+    if (b.equals(b)) {
+        print("OK4 ");
+    } else {
+        println("FAIL");
+    }
+
+    a = b; // Polymorphisme
+    if (!a.equals(b)) {
+        println("FAIL");
+    } else {
+        print("OK5 ");
+    }
+
+    if (b.equals(a)) {
+        println("OK6");
+    } else {
+        println("FAIL");
+    }
+
+    b2 = b;
+    b = new B();
+
+    if (a.equals(b)) {
+        println("FAIL");
+    }
+
+    if (b2.equals(b)) {
+        println("FAIL");
+    }
+
+    if (b.equals(b2)) {
+        println("FAIL");
+    }
+
+    bool = b != null;
+    if (!bool) {
+        println("FAIL");
+    }
+
+    bool = b == null;
+    if (bool) {
+        println("FAIL");
+    }
+
+    if (b != null) {
+
+    } else {
+        println("FAIL");
+    }
+
+    if (b == null) {
+        println("FAIL");
+    }
+
+    b = null;
+
+    bool = b != null;
+    if (bool) {
+        println("FAIL");
+    }
+
+    bool = b == null;
+    if (!bool) {
+        println("FAIL");
+    }
+
+    if (b != null) {
+        println("FAIL");
+    }
+
+    if (b == null) {
+
+    } else {
+        println("FAIL");
+    }
+}

@@ -1,0 +1,22 @@
+class Animal {
+    void crier(){
+        println("Cet animal crie");
+    }
+}
+class Vache extends Animal{
+    void crier(){
+        println("Cette vache meugle!!");
+    }
+}
+class Canard extends Animal{
+    void crier(){
+        println("Ce canard cancane!!");
+    }
+}
+
+{
+    Animal vache = new Vache();
+    Animal canard = new Canard();
+    vache.crier();
+    canard.crier();
+}

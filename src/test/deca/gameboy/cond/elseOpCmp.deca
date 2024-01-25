@@ -1,0 +1,98 @@
+{
+    int x = 4;
+    int y = 3;
+    int z = 5;
+    int a = 4;
+
+    boolean b;
+
+    b = x == y;
+    if (b) { println(); }
+    b = !(x == y);
+    if (!b) { println(); }
+
+    b = x != y;
+    if (!b) { println(); }
+    b = !(x != y);
+    if (b) { println(); }
+
+    b = x < y;
+    if (b) { println(); }
+    b = !(x < y);
+    if (!b) { println(); }
+
+    b = x <= y;
+    if (b) { println(); }
+    b = !(x <= y);
+    if (!b) { println(); }
+
+    b = x >= y;
+    if (!b) { println(); }
+    b = !(x >= y);
+    if (b) { println(); }
+
+    b = x > y;
+    if (!b) { println(); }
+    b = !(x > y);
+    if (b) { println(); }
+
+    b = x == z;
+    if (b) { println(); }
+    b = !(x == z);
+    if (!b) { println(); }
+
+    b = x != z;
+    if (!b) { println(); }
+    b = !(x != z);
+    if (b) { println(); }
+
+    b = x < z;
+    if (!b) { println(); }
+    b = !(x < z);
+    if (b) { println(); }
+
+    b = x <= z;
+    if (!b) { println(); }
+    b = !(x <= z);
+    if (b) { println(); }
+
+    b = x >= z;
+    if (b) { println(); }
+    b = !(x >= z);
+    if (!b) { println(); }
+
+    b = x > z;
+    if (b) { println(); }
+    b = !(x > z);
+    if (!b) { println(); }
+
+    b = x == a;
+    if (!b) { println(); }
+    b = !(x == a);
+    if (b) { println(); }
+
+    b = x != a;
+    if (b) { println(); }
+    b = !(x != a);
+    if (!b) { println(); }
+
+    b = x < a;
+    if (b) { println(); }
+    b = !(x < a);
+    if (!b) { println(); }
+
+    b = x <= a;
+    if (!b) { println(); }
+    b = !(x <= a);
+    if (b) { println(); }
+
+    b = x >= a;
+    if (!b) { println(); }
+    b = !(x >= a);
+    if (b) { println(); }
+
+    b = x > a;
+    if (b) { println(); }
+    b = !(x > a);
+    if (!b) { println(); }
+}

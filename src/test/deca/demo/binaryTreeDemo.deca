@@ -1,0 +1,78 @@
+class Cell {
+    Cell rightSon = null;
+    Cell leftSon = null;
+    int value = 0;
+
+    void init(int value) {
+        this.value = value;
+    }
+
+    void setRightSon(Cell rightSon) {
+        this.rightSon = rightSon;
+    }
+
+    void setLeftSon(Cell leftSon) {
+        this.leftSon = leftSon;
+    }
+}
+
+class BinaryTree {
+    Cell head = null;
+
+    void addCell(int data) {
+        this.head = addCellRec(head, data);
+    }
+
+    Cell addCellRec(Cell head, int data) {
+        Cell a;
+        if (head == null) {
+            a = new Cell();
+            a.init(data);
+            return a;
+        } else {
+            if (data < head.value) {
+                head.leftSon = addCellRec(head.leftSon, data);
+            } else {
+                head.rightSon = addCellRec(head.rightSon, data);
+            }
+        }
+        return head;
+    }
+
+    void displayTree(Cell head) {
+        if (head != null) {
+            println(head.value);
+            displayTree(head.leftSon);
+            displayTree(head.rightSon);
+        }
+    }
+
+    boolean valueInRec(Cell head, int value) {
+        if (head == null) {
+            return false;
+        } else {
+            if (value == head.value) {
+                return true;
+            } else {
+                if (value < head.value) {
+                    return valueInRec(head.leftSon, value);
+                } else {
+                    return valueInRec(head.rightSon, value);
+                }
+            }
+        }
+    }
+}
+
+{
+    BinaryTree tree = new BinaryTree();
+    tree.addCell(5);
+    tree.addCell(2);
+    tree.addCell(9);
+    tree.addCell(3);
+    tree.addCell(7);
+    tree.addCell(1);
+    tree.addCell(20);
+
+    tree.displayTree(tree.head);
+}

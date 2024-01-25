@@ -1,0 +1,25 @@
+// Description :
+//    Test d'une classe où l'initilisation d'un attribut utilise
+//    un autre attribut initialisé après
+//
+// Resultats :
+//    0 0 20
+
+class A {
+    int a = this.getC();
+    int b = c;
+    int c = 20;
+
+    int getC() {
+        return this.c;
+    }
+
+    void displayVars() {
+        println(a, " ", b, " ", c);
+    }
+}
+
+{
+    A a = new A();
+    a.displayVars();
+}

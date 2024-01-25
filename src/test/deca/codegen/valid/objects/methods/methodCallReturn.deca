@@ -1,0 +1,38 @@
+// Description :
+//    Test d'appel d'une méthode avec un return d'une valeur
+//
+// Resultats :
+//    0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+class A {
+    int idCpt = -1;
+
+    int getAndIncrId() {
+        idCpt = idCpt + 1;
+        return idCpt;
+    }
+}
+
+{
+    A a = new A();
+    int idCpt;
+
+    print(a.getAndIncrId(), " ");
+    idCpt = a.getAndIncrId();
+    print(idCpt, " ");
+    idCpt = a.getAndIncrId();
+    print(idCpt, " ");
+    print(a.getAndIncrId(), " ");
+    print(a.getAndIncrId(), " ");
+
+    idCpt = a.getAndIncrId();
+    print(idCpt, " ");
+    while (idCpt < 20) {
+        idCpt = a.getAndIncrId();
+        if (idCpt == 20) {
+            println(idCpt);
+        } else {
+            print(idCpt, " ");
+        }
+    }
+}

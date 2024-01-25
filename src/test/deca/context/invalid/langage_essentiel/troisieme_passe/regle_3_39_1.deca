@@ -1,0 +1,15 @@
+// Description:
+//    regle 3.39, condition
+//
+// Resultats:
+//    Ligne 14: Undeclared type identifier : 'B'.
+
+
+class C{
+
+}
+
+{
+    C c = new C();
+    C b = (B) (c);
+}

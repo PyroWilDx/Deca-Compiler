@@ -1,0 +1,10 @@
+// Description :
+//    Test de l'option -n
+//
+// Resultats :
+//    !! SI EXECUTION AVEC L'OPTION -n !!
+//    L'exécution n'affiche rien
+
+{
+    float y = 340282346638528860000000000000000000.0 * 1000000;
+}

@@ -1,0 +1,52 @@
+// Description :
+//    Test d'une méthode qui appelle une autre méthode d'une même classe
+//
+// Resultats :
+//    10 20 30
+//    80 70 60
+//    180 170 160
+//    110 120 130
+//    80 70 60
+//    180 170 160
+
+class A {
+    int x;
+    int y;
+    int z;
+
+    void displayParams(int x, int y, int z) {
+        println(x, " ", y, " ", z);
+    }
+
+    int method1() {
+        int x = 10;
+        int y = 20;
+        int z = 30;
+        this.displayParams(x, y, z);
+        this.method2();
+        x = 110;
+        y = 120;
+        z = 130;
+        this.displayParams(x, y, z);
+        return this.method2();
+    }
+
+    int method2() {
+        int z = 60;
+        int y = 70;
+        int x = 80;
+        this.displayParams(x, y, z);
+        z = 160;
+        y = 170;
+        x = 180;
+        this.displayParams(x, y, z);
+        return x;
+    }
+}
+
+{
+    A a = new A();
+    if (a.method1() != 180) {
+        println("FAIL");
+    }
+}

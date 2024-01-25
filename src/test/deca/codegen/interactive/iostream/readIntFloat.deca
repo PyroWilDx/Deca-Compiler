@@ -1,0 +1,18 @@
+// Description :
+//    Test de lecture d'un int et d'un float
+//
+// Resultats :
+//    Affiche l'addition de la première entrée (int) et de la deuxième entrée (float)
+
+
+{
+    int x;
+    float y;
+    float z;
+
+    x = readInt();
+    y = readFloat();
+
+    z = x + y;
+    println(z);
+}

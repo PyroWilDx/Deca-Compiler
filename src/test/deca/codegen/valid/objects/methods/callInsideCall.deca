@@ -1,0 +1,80 @@
+// Description :
+//    Test d'appels de méthodes dans un appel de méthode
+//
+// Resultats :
+//    200 30 0 30
+
+class A {
+    int x = 1;
+    int y = 2;
+    int z = 3;
+
+    int getX() {
+        return x;
+    }
+    int getY() {
+        return y;
+    }
+    int getZ() {
+        return z;
+    }
+    int add(int x, int y) {
+        return x + y;
+    }
+}
+
+class B {
+    int z = 6;
+    int y = 5;
+
+    int x = 4;
+    int getX() {
+        return x;
+    }
+    int getY() {
+        return y;
+    }
+    int getZ() {
+        return z;
+    }
+    int sub(int y, int x) {
+        return y - x;
+    }
+    int add20(int d) {
+        return d + 20;
+    }
+}
+
+class C {
+    int y = 8;
+    int x = 7;
+    int z = 9;
+    int d = 10;
+
+    int getX() {
+        return x;
+    }
+    int getY() {
+        return y;
+    }
+    int getZ() {
+        return z;
+    }
+    int mul(int z, int x) {
+        return z * x;
+    }
+    void display(int x, int y, int z) {
+        A a = new A();
+        B b = new B();
+        C c = new C();
+        print(x + c.mul(a.add(b.sub(10, 2), a.add(8, 4)), b.sub(10, 5)), " "); // 200
+        print(y + b.sub(mul(a.add(a.add(a.y, a.z), b.y), c.z), c.mul(c.y, this.z)), " "); // 30
+        print(c.mul(b.sub(a.add(a.add(x, y), z), 130), 8972), " "); // 0
+        println(b.add20(d));
+    }
+}
+
+{
+    C c = new C();
+    c.display(100, 12, 18);
+}

@@ -1,0 +1,82 @@
+class A {
+    int x = 1;
+    int y = 2;
+    int a0;
+    int z = 4;
+    int a1 = 0;
+}
+
+class B {
+    int b0 = 10;
+    int z = 16;
+    int y = 32;
+    int x = 8;
+}
+
+class C {
+    int x = 1;
+    int y = 2;
+    int z = 3;
+}
+
+class D {
+    int x = 9;
+    int y = 8;
+    int z = 7;
+}
+
+{
+    A a = new A();
+    B b = new B();
+    C c = new C();
+    D d = new D();
+
+    int x = a.x;
+    int y = b.y;
+
+    if (x != 1) {
+        println();
+    }
+    if (y != 32) {
+        println();
+    }
+    if (a.y != 2) {
+        println();
+    }
+    if (a.a0 != 0) {
+        println();
+    }
+    if (a.z != 4) {
+        println();
+    }
+    if (a.a1 != 0) {
+        println();
+    }
+    if (b.b0 != 10) {
+        println();
+    }
+    if (b.x != 8) {
+        println();
+    }
+    if (b.z != 16) {
+        println();
+    }
+    if (c.x != 1) {
+        println();
+    }
+    if (c.y != 2) {
+        println();
+    }
+    if (c.z != 3) {
+        println();
+    }
+    if (d.x != 9) {
+        println();
+    }
+    if (d.y != 8) {
+        println();
+    }
+    if (d.z != 7) {
+        println();
+    }
+}

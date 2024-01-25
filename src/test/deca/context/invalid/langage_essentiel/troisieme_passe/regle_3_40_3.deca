@@ -1,0 +1,17 @@
+// Description:
+//    regle 3.40, l'expression evaluee par instanceof doit etre de type class ou null
+//
+// Resultats:
+//    Ligne 14: InstanceOf can only be used on class types.
+
+
+class C{
+
+}
+
+{
+    int x;
+    if( x instanceof C){
+        print("");
+    }
+}

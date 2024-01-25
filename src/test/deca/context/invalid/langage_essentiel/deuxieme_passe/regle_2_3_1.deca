@@ -1,0 +1,13 @@
+// Description:
+//    regle 2.3 condition
+//
+// Resultats:
+//    Ligne 6: 'x' is a field and a method at once.
+class A {
+    int x;
+    void x() {
+    }
+}
+
+// raison : opération partielle ⊕
+//  message : « un nom de méthode redéclare un nom de champ »

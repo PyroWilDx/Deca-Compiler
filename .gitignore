@@ -1,0 +1,23 @@
+# Generated
+/target
+
+# Editor
+.classpath
+.project
+.metadata
+.settings
+.idea
+
+global
+gen
+docker/ima_sources/
+
+*.iml
+*.tokens
+*.interp
+*.ass
+*.asm
+*.o
+*.gb
+*.res
+!*resultatCorrect.res

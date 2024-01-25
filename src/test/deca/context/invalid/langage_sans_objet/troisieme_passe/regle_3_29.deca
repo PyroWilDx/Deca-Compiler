@@ -1,0 +1,12 @@
+// Description:
+//    regle 3.29 type != boolean
+//
+// Resultats:
+//    Ligne 7: Condition is of type 'int', it must be boolean.
+{
+    if (1) {
+    }
+}
+
+// raison : type != boolean
+// message : Condition is of type 'int', it must be boolean.

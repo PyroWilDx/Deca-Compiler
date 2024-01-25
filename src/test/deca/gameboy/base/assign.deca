@@ -1,0 +1,39 @@
+{
+    int x;
+    int y = 2;
+    boolean z = true;
+    int a;
+    int b;
+    int c;
+
+    x = 4;
+    z = false;
+
+    if (x != 4) {
+        println();
+    }
+
+    if (y != 2) {
+        println();
+    }
+
+    if (z) {
+        println();
+    }
+
+    z = true;
+    if (!z) {
+        println();
+    }
+
+    a = 6;
+    b = 4;
+    c = 5;
+    x = (a * 2) + (b * 4) + (c * 6);
+    if (x != 58) {
+        println();
+    }
+    if (((a * 2) + (b * 4) + (c * 6)) != 58) {
+        println();
+    }
+}

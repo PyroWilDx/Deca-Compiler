@@ -1,0 +1,95 @@
+class A {
+    int x;
+}
+
+class B {
+    int y;
+}
+
+{
+    A a = new A();
+    B b = new B();
+    B b2 = null;
+
+    boolean x = a.equals(b);
+
+    if (x) {
+        println();
+    }
+
+    x = !a.equals(b);
+    if (!x) {
+        println();
+    }
+
+    x = a.equals(a);
+    if (!x) {
+        println();
+    }
+
+    x = !a.equals(a);
+    if (x) {
+        println();
+    }
+
+    if (a.equals(null)) {
+        println();
+    }
+
+    if (b.equals(null)) {
+        println();
+    }
+
+    if (a.equals(b2)) {
+        println();
+    }
+
+    if (b.equals(b2)) {
+        println();
+    }
+
+    if (a.equals(b)) {
+        println();
+    }
+
+    if (a.equals(a)) {
+
+    } else {
+        println();
+    }
+
+    if (!a.equals(a)) {
+        println();
+    }
+
+    if (b.equals(a)) {
+        println();
+    } else {
+
+    }
+
+    if (b.equals(b)) {
+
+    } else {
+        println();
+    }
+
+    if (!b.equals(b)) {
+        println();
+    }
+
+    b2 = b;
+    b = new B();
+
+    if (a.equals(b)) {
+        println();
+    }
+
+    if (b2.equals(b)) {
+        println();
+    }
+
+    if (b.equals(b2)) {
+        println();
+    }
+}

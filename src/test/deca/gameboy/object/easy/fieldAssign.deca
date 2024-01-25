@@ -1,0 +1,22 @@
+class A {
+    int x;
+    int y;
+    int z;
+}
+
+{
+    A a = new A();
+    a.x = 2;
+    a.y = 4;
+    a.z = 8;
+    
+    if (a.x != 2) {
+        println();
+    }
+    if (a.y != 4) {
+        println();
+    }
+    if (a.z != 8) {
+        println();
+    }
+}

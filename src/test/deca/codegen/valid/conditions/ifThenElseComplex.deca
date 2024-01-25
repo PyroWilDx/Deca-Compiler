@@ -1,0 +1,49 @@
+// Description :
+//    Test de plusieurs if/else imbriqués
+//
+// Resultats :
+//    OK
+
+{
+    int x = 1;
+    int y = 2;
+    int z = 4;
+    if (x + x == y) {
+        if (y + y == z) {
+            if (2 * y == z) {
+                if (z == z) {
+                    if (x + x + y == z) {
+                        if ((x == y / 2) && (y == z / 2) && (z == 6)) {
+
+                        } else {
+                            z = 4;
+                            z = 4;
+                            z = 4;
+                            z = 4;
+                            if ((z == 6) || (x == y / 2) || (y == z / 2)) {
+                                z = 10;
+                                if (70 * x != z) {
+                                    if (!((z == 6) || (y == 10))) {
+                                        if (!((z == 10) && (z == 42)) && false) {
+
+                                        } else {
+                                            z = 10;
+                                            z = 10;
+                                            z = 10;
+                                            z = 10;
+                                            if (x < y && y < z) {
+                                                if (z > y && y > x) {
+                                                    println("OK");
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

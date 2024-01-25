@@ -1,0 +1,9 @@
+// Description :
+//    Test du débordement sur une opération arithmétique sur des flottants
+//
+// Resultats :
+//    Error: Float Operation Overflow
+
+{
+    float z = 340282346638528860000000000000000000.0 * 10000000.0;
+}

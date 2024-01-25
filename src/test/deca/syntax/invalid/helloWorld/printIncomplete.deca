@@ -1,0 +1,10 @@
+// Description:
+//    test de programme incorrect syntaxiquement (parenthèse non fermée de print)
+//
+// Resultats:
+//    ligne 10 : Erreur, missing ')' at ';'
+//
+// Historique:
+//    cree le 01/01/2024
+
+{print("hello world" ;}

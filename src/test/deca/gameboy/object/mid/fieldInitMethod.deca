@@ -1,0 +1,37 @@
+class A {
+    int a = 20;
+    int b = initB();
+    int c = 10;
+
+    int initB() {
+        a = 40;
+        return a;
+    }
+
+    void check() {
+        if (a != 40) {
+            println();
+        }
+        if (b != 40) {
+            println();
+        }
+        if (c != 10) {
+            println();
+        }
+    }
+}
+
+{
+    A a = new A();
+    a.check();
+
+    if (a.a != 40) {
+        println();
+    }
+    if (a.b != 40) {
+        println();
+    }
+    if (a.c != 10) {
+        println();
+    }
+}

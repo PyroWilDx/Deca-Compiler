@@ -1,0 +1,15 @@
+// Description :
+//    Test du modulo et du modulo par 0
+//
+// Resultats :
+//    2
+//    Error: Division by 0
+
+{
+    int x = 14;
+    int y = 3;
+    println(x % y);
+
+    y = 0;
+    println(x % y);
+}

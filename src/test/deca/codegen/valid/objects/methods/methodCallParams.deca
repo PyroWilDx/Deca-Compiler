@@ -1,0 +1,22 @@
+// Description :
+//    Test d'appel d'une méthode avec plusieurs paramètres
+//
+// Resultats :
+//    x + y + z = 10 + 20 + 30 = 60
+//    x * y * z = 2 * 6 * 10 = 120
+
+class A {
+    void pSum(int x, int y, int z) {
+        println("x + y + z = ", x, " + ", y, " + ", z, " = ", x + y + z);
+    }
+
+    void pMul(int x, int y, int z) {
+        println("x * y * z = ", x, " * ", y, " * ", z, " = ", x * y * z);
+    }
+}
+
+{
+    A a = new A();
+    a.pSum(10, 20, 30);
+    a.pMul(2, 6, 10);
+}

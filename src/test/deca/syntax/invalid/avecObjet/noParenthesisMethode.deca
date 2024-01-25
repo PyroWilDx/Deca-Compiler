@@ -1,0 +1,6 @@
+class A {
+    int a ;
+    int next {
+        return a + 1;
+    }
+}

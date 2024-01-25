@@ -1,0 +1,21 @@
+// Description :
+//    Test simple du this
+//
+// Resultats :
+//    2 2
+//    6 6
+
+class A {
+    protected int x = 2;
+
+    void thisX() {
+        println(this.x, " ", x);
+        this.x = 6;
+        println(x, " ", this.x);
+    }
+}
+
+{
+    A a = new A();
+    a.thisX();
+}

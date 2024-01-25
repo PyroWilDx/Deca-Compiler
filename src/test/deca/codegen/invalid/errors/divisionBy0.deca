@@ -1,0 +1,9 @@
+// Description :
+//    Test de la division par 0
+//
+// Resultats :
+//    Error: Division by 0
+
+{
+    println(1 / 0);
+}

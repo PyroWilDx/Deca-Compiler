@@ -1,0 +1,12 @@
+// Description:
+//    regle 3.72, pas une méthode
+//
+// Resultats:
+//    Ligne 11: 'x' is not a method identifier.
+class A {
+    int x;
+}
+{
+    A a = new A();
+    a.x();
+}

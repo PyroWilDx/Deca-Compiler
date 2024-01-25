@@ -1,0 +1,22 @@
+class A {
+    int x;
+    int y;
+    int z;
+    
+    void method(int x, int y, int z) {
+        if (x != 10) {
+            println();
+        }
+        if (y != 20) {
+            println();
+        }
+        if (z != 30) {
+            println();
+        }
+    }
+}
+
+{
+    A a = new A();
+    a.method(10, 20, 30);
+}

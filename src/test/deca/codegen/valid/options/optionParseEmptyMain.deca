@@ -1,0 +1,7 @@
+// Description :
+//    Test de l'option -p sur un empty main
+//
+// Resultats :
+//    !! SI EXECUTION AVEC L'OPTION -p !!
+//    Ne doit pas créer d'exécutable, mais doit compiler sans problème.
+//    Le compilateur affiche un programme vide

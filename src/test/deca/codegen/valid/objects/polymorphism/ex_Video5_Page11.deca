@@ -1,0 +1,61 @@
+// Description :
+//    Test du programme page 11 de la vidéo numéro 5 du cours
+//    Avec quelques affichages en plus
+//
+// Resultats :
+//    p1 : Point 2d : (1, 1)
+//    p3 before p2.diag(3) : Point 3d : (2, 2, 2)
+//    p3 after p2.diag(3) : Point 3d : (5, 5, 5)
+//    p2 : Point 3d : (5, 5, 5)
+
+class Point2D {
+    int x; // Abscisse
+    int y; // Ordonnee
+
+    // Deplace ce point de a en diagonale.
+    void diag(int a) {
+        x = x + a;
+        y = y + a;
+    }
+
+    void displaySelf() {
+        println("Point 2d : (", x, ", ", y, ")");
+    }
+}
+
+class Point3D extends Point2D {
+    int z; // Hauteur
+
+    // On redefinit la methode diag pour tenir compte de z
+    void diag(int a) {
+        x = x + a;
+        y = y + a;
+        z = z + a;
+    }
+
+    void displaySelf() {
+        println("Point 3d : (", x, ", ", y, ", ", z, ")");
+    }
+}
+
+{
+    Point2D p1, p2;
+    Point3D p3;
+
+    p1 = new Point2D();
+    p1.diag(1);
+    print("p1 : ");
+    p1.displaySelf();
+
+    p3 = new Point3D();
+    p3.diag(2);
+    print("p3 before p2.diag(3) : ");
+    p3.displaySelf();
+
+    p2 = p3;
+    p2.diag(3);
+    print("p3 after p2.diag(3) : ");
+    p3.displaySelf();
+    print("p2 : ");
+    p2.displaySelf();
+}

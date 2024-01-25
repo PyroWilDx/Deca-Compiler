@@ -1,0 +1,13 @@
+class A {
+}
+
+
+class B extends A {
+}
+class C extends B {
+}
+
+{
+Object o = (C)(new A());
+A a = (A) ( new C());
+}

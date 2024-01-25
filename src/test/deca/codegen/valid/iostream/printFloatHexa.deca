@@ -1,0 +1,9 @@
+// Description :
+//    Test d'affichage de float en hexadécimal
+//
+// Resultats :
+//    0x1.3851ecp+0 -0x1.5364d8p+5 0x0p+03.1416 -0x1.63d70ap+1
+
+{
+    printlnx(1.22, " ", -42.424242, " ", 0.000, "3.1416", " ", -2.78);
+}

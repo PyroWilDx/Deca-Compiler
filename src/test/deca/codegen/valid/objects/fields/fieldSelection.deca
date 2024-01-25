@@ -1,0 +1,38 @@
+// Description :
+//    Test d'une selection d'attribut d'une classe
+//
+// Resultats :
+//    1.00000e+00 2 4 0 1.00000e+00
+//    8.00000e+00 3.20000e+01 16 0.00000e+00 1
+//    42 12
+
+class A {
+    float x = 1.0;
+    int y = 2;
+    int z = 4;
+    int a0 = 0;
+    float a1 = 1.0;
+}
+
+class B {
+    float b0 = 0.0;
+    int b1 = 1;
+    int z = 16;
+    float y = 32.0;
+    int x = 8;
+}
+
+{
+    A a = new A();
+    B b = new B();
+
+    int yA = a.y;
+    float xB = b.x;
+
+    println(a.x, " ", yA, " ", a.z, " ", a.a0, " ", a.a1);
+    println(xB, " ", b.y, " ", b.z, " ", b.b0, " ", b.b1);
+
+    a.z = 42;
+    b.x = 12;
+    println(a.z, " ", b.x);
+}

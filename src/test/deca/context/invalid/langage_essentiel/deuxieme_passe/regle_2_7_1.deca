@@ -1,0 +1,12 @@
+// Description:
+//    regle 2.7 condition, pas une méthode
+//
+// Resultats:
+//    Ligne 10: A field 'a' already exists in super class.
+class A {
+    int a;
+}
+class B extends A {
+    void a(){
+    }
+}

@@ -1,0 +1,42 @@
+class A {
+    B b;
+
+    void init() {
+        b = new B();
+        if (b.x != 1) {
+            println();
+        }
+        if (b.y != 42) {
+            println();
+        }
+    }
+
+    void check() {
+        if (b.x != 1) {
+            println();
+        }
+        if (b.y != 42) {
+            println();
+        }
+    }
+
+}
+
+class B {
+    int x = 1;
+    int y = 42;
+}
+
+
+{
+    A a = new A();
+    a.init();
+    a.check();
+
+    if (a.b.x != 1) {
+        println();
+    }
+    if (a.b.y != 42) {
+        println();
+    }
+}

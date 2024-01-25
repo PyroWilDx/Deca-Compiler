@@ -1,0 +1,112 @@
+// Description :
+//    Test de création d'une liste chainée
+//
+// Resultats :
+//    3
+//    2
+//    1
+
+class Event {
+    Event nextEvent;
+    Event previousEvent;
+    int i;
+
+    void initEvent(Event nextEvent, Event previousEvent, int i) {
+        this.nextEvent = nextEvent;
+        this.previousEvent = previousEvent;
+        this.i = i;
+    }
+
+    Event getNext() {
+        return this.nextEvent;
+    }
+
+    Event getPrevious() {
+        return this.previousEvent;
+    }
+
+    void setNext(Event event) {
+        this.nextEvent = event;
+    }
+
+    void setPrevious(Event event) {
+        this.previousEvent = event;
+    }
+
+    int Execute() {
+        return 1;
+    }
+}
+
+class DoubleLinkedListEvents {
+    Event head = null;
+    Event tail = null;
+
+    void addEvent(Event event) {
+        if (head == null) {
+            head = event;
+            tail = event;
+        } else {
+            this.tail.setPrevious(event);
+            event.setNext(tail);
+            this.tail = event;
+        }
+    }
+
+    void removeEvent(Event event) {
+        Event prev = event.getPrevious();
+        Event next = event.getNext();
+        if (prev != null) {
+            prev.setNext(next);
+        } else {
+            tail = next;
+        }
+        if (next != null) {
+            next.setPrevious(prev);
+        } else {
+            head = prev;
+        }
+    }
+
+    Event getTail() {
+        return tail;
+    }
+
+    Event getHead() {
+        return head;
+    }
+
+    Event popLast() {
+        Event a = tail;
+        removeEvent(tail);
+        return a;
+
+    }
+
+    Event popFirst() {
+        return head;
+        removeEvent(head);
+    }
+
+    void displayEvents() {
+        Event current = tail;
+        while (current != null) {
+            println(current.i);
+            current = current.getNext();
+        }
+    }
+}
+
+{
+    DoubleLinkedListEvents events = new DoubleLinkedListEvents();
+    Event firstEvent = new Event();
+    Event secondEvent = new Event();
+    Event thirdEvent = new Event();
+    firstEvent.initEvent(null, null, 1);
+    secondEvent.initEvent(null, null, 2);
+    thirdEvent.initEvent(null, null, 3);
+    events.addEvent(firstEvent);
+    events.addEvent(secondEvent);
+    events.addEvent(thirdEvent);
+    events.displayEvents();
+}

@@ -1,0 +1,11 @@
+// Description :
+//    Test de l'option -v
+//
+// Resultats :
+//    !! SI EXECUTION AVEC L'OPTION -v !!
+//    Ne doit pas créer d'exécutable, mais doit compiler sans problème.
+
+{
+    int x = 1;
+    println("-v");
+}

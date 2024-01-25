@@ -1,0 +1,9 @@
+// Description:
+//    regle 3.65, pas une classe
+//
+// Resultats:
+//    Ligne 8: Expression type must be a class.
+{
+    int x = 1;
+    int a = x.a;
+}

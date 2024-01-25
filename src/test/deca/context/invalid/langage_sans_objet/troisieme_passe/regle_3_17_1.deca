@@ -1,0 +1,12 @@
+// Description:
+//    regle 3.17 opération partielle
+//
+// Resultats:
+//    Ligne 9: Variable 'a' already declared.
+
+{
+    int a;
+    int a;
+}
+// message : Variable 'a' already declared.
+// raison : operation partielle.

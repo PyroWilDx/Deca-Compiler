@@ -1,0 +1,14 @@
+// Description:
+//    regle 3.65, la classe courante n'est pas sous classe de la classe contenant le champs.
+//
+// Resultats:
+//    Ligne 12: 'x' is protected.
+class A {
+    protected int x = 1;
+}
+class X {
+    void m() {
+        A a = new A();
+        println(a.x);
+    }
+}

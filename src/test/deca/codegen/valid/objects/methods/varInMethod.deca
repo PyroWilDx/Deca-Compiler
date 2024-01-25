@@ -1,0 +1,22 @@
+// Description :
+//    Test de variables dans une méthode
+//
+// Resultats :
+//    2 4 16 22 44
+
+class A {
+    protected int x = 2;
+
+    void calcValue() {
+        int y = 2 * x; // 2 * 2 = 4
+        int z = 8 * x; // 8 * 2 = 16
+        int x = x + y + z; // 2 + 4 + 16 = 22
+        int a = 2 * x; // 2 * 22 = 44
+        println(this.x, " ", y, " ", z, " ", x, " ", a);
+    }
+}
+
+{
+    A a = new A();
+    a.calcValue();
+}

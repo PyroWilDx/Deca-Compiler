@@ -1,0 +1,11 @@
+//    test de programme incorrect syntaxiquement (syntaxe de while incorrecte)
+//
+// Resultats:
+//    ligne 10 : Erreur, parenthèse manquante de while
+//
+// Historique:
+//    cree le 01/01/2024
+
+{int a =3;
+while(a>2{
+print("hello world");}

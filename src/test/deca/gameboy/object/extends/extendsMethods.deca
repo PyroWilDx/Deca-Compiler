@@ -1,0 +1,47 @@
+class A {
+    int x = 1;
+    int y = 2;
+
+    int getX() {
+        return x;
+    }
+
+    int getY() {
+        return y;
+    }
+}
+
+class B extends A {
+    int z;
+
+    int getX() {
+        x = 42;
+        return x;
+    }
+
+    int getZ() {
+        return z;
+    }
+}
+
+{
+    A a = new A();
+    B b = new B();
+
+    if (a.getX() != 1) {
+        println();
+    }
+    if (a.getY() != 2) {
+        println();
+    }
+
+    if (b.getX() != 42) {
+        println();
+    }
+    if (b.getY() != 2) {
+        println();
+    }
+    if (b.getZ() != 0) {
+        println();
+    }
+}

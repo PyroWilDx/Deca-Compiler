@@ -1,0 +1,49 @@
+// Description :
+//    Test de l'héritage avec des méthodes
+//
+// Resultats :
+//    1 2 4 2 0
+
+class A {
+    int x = 1;
+    int y = 2;
+
+    void displayX() {
+        print(x);
+    }
+
+    void displayY() {
+        print(y);
+    }
+}
+
+class B extends A {
+    int x = 4;
+    int z;
+
+    void displayX() {
+        print(x);
+    }
+
+    void displayZ() {
+        print(z);
+    }
+}
+
+{
+    A a = new A();
+    B b = new B();
+
+    a.displayX();
+    print(" ");
+    a.displayY();
+    print(" ");
+
+    b.displayX();
+    print(" ");
+    b.displayY();
+    print(" ");
+    b.displayZ();
+
+    println();
+}

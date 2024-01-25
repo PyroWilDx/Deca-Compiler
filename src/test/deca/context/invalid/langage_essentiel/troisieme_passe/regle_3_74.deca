@@ -1,0 +1,16 @@
+// Description:
+//    regle 3.74, signature vide
+//
+// Resultats:
+//    Ligne 15: Too many arguments.
+class A {
+    void f(int x, float y){
+    }
+}
+{
+    A a = new A();
+    int x = 1;
+    float y = 1;
+    float z = 1;
+    a.f(x, y, z);
+}

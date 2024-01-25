@@ -1,0 +1,17 @@
+// Description:
+//    regle 3.40, la classe donnee a instanceof doit exister
+//
+// Resultats:
+//    Ligne 14: Undeclared type identifier : 'A'.
+
+
+class C{
+
+}
+
+{
+    C c = new C();
+    if( c instanceof A){
+        print("");
+    }
+}

@@ -1,0 +1,8 @@
+// Description:
+//    regle 3.42, condition
+//
+// Resultats:
+//    Ligne 7: 'int' is not a class.
+{
+    int a = new int();
+}

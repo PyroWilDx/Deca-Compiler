@@ -1,0 +1,22 @@
+// Description :
+//    Test du débordement sur une opération arithmétique sur des flottants
+//
+// Resultats :
+//    Error: Float Operation Overflow
+
+{
+    int x = 10;
+    float y = 4.0 *
+        x * x * x * x * x *
+        x * x * x * x * x *
+        x * x * x * x * x *
+        x * x * x * x * x *
+        x * x * x * x * x *
+        x * x * x * x * x *
+        x * x * x * x * x *
+        x * x * x * x * x *
+        x * x * x * x * x *
+        x * x * x * x * x *
+        x * x * x * x * x *
+        x * x * x * x * x;
+}

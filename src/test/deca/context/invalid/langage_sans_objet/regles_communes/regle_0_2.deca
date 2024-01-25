@@ -1,0 +1,11 @@
+// Description:
+//    regle 0.1 opération partielle
+//
+// Resultats:
+//    Ligne 7: Undeclared type identifier : 'A'.
+{
+    A a;
+}
+
+// raison : opération partielle
+// “Identificateur de type non déclaré”

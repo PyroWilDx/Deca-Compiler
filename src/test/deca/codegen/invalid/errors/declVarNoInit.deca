@@ -1,0 +1,14 @@
+// Description :
+//    Test de déclarations de variables sans les initialiser
+//
+// Resultats :
+//    ** IMA ** ERREUR ** Ligne 13 :
+//    WINT avec R1 indefini
+
+{
+    int z;
+    int a;
+    float b;
+
+    print(z, a, b);
+}

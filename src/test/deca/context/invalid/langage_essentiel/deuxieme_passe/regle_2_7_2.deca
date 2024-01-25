@@ -1,0 +1,13 @@
+// Description:
+//    regle 2.7 condition, sig != sig2
+//
+// Resultats:
+//    Ligne 11: Method 'f' defined in super class with another signature.
+class A {
+    void f(int x) {
+    }
+}
+class B extends A {
+    void f(int x, int y){
+    }
+}
